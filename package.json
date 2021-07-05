@@ -1,0 +1,23 @@
+{
+  "name": "isanchezd1988-site",
+  "version": "1.0.0",
+  "description": "isanchezd1988 site builder",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isanchezd1988/isanchezd1988-site.git"
+  },
+  "author": "Iván Sánchez <sanchez.diaz.ivan@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/isanchezd1988/isanchezd1988-site/issues"
+  },
+  "homepage": "https://github.com/isanchezd1988/isanchezd1988-site#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1"
+  }
+}
