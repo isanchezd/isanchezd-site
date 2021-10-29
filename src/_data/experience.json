@@ -1,9 +1,38 @@
 {
     "title": "Experiencia",
     "experiences": [{
-        "position": "Senior Frontend Developer",
-        "company": "Sopra Steria S.A",
-        "description": "Senior frontend developer",
-        "time": "2019 - Present"
+        "position": "Senior Frontend Developer & Frontend Technical Lead",
+        "company": "Sopra Steria",
+        "description": "Responsable técnico de proyectos frontend en labores de desarrollo y mantenimiento de aplicaciones frontend (SPA) para el sector de los seguros, incluyendo tareas de supervisión del equipo de desarrollo.",
+        "technologies": [],
+        "time": "2019 - Actualidad"
+    },
+    {
+        "position": "Middle Frontend Developer & Frontend Technical Lead",
+        "company": "Vector ITC group",
+        "description": "Responsable técnico de proyectos frontend en labores de desarrollo y mantenimiento de aplicaciones frontend (SPA) asi como desarrollo de webcomponents para el sector bancario , incluyendo tareas de supervisión del equipo de desarrollo",
+        "technologies": [],
+        "time": "2016 - 2019"
+    },
+    {
+        "position": "Junior Fullstack Developer",
+        "company": "Inmedia studio",
+        "description": "Desarrollador Fullstack en labores de desarrollo y mantenmiento en aplicacion frontend hibrida (SPA) como labores de desarrollo y mantenimiento de backend (API) para el sector educativo",
+        "technologies": [],
+        "time": "2015 - 2016"
+    },
+    {
+        "position": "Junior Fullstack Developer",
+        "company": "Support Factory",
+        "description": "Desarrollador Fullstack en labores de desarrollo y mantenmiento en aplicacion frontend hibrida (SPAs) como labores de desarrollo y mantenimiento de backends (APIs) para el sector educativo y sector editorial",
+        "technologies": [],
+        "time": "2012 - 2015"
+    },
+    {
+        "position": "Junior Android Developer",
+        "company": "Oesia",
+        "description": "Desarrollo de una aplicación POC para el control por geoposicion de vehiculos de transporte",
+        "technologies": [],
+        "time": "2012"
     }]
 }
