@@ -2,10 +2,14 @@
   "name": "isanchezd1988-site",
   "version": "1.0.0",
   "description": "isanchezd1988 site builder",
-  "main": "index.js",
+  "default": "dist/index.html",
   "scripts": {
-    "start": "npx @11ty/eleventy --serve",
-    "build": "npx @11ty/eleventy"
+    "start": "run-p eleventy:dev parcel:build",
+    "eleventy:dev": "npx @11ty/eleventy --serve",
+    "parcel:build": "run-p parcel:build:scss parcel:build:js parcel:build:images",
+    "parcel:build:scss": "parcel build src/scss/styles.scss --dist-dir dist",
+    "parcel:build:js": "parcel build src/js/main.js --dist-dir dist",
+    "parcel:build:images": "parcel build src/assets/images/* --dist-dir dist"
   },
   "repository": {
     "type": "git",
@@ -18,10 +22,16 @@
   },
   "homepage": "https://github.com/isanchezd1988/isanchezd1988-site#readme",
   "dependencies": {
-    "isanchezd1988-site-template": "git+https://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:x-oauth-basic@github.com/isanchezd1988/isanchezd1988-site-template.git"
+    "@fortawesome/fontawesome-free": "^5.15.3",
+    "@popperjs/core": "^2.9.2",
+    "bootstrap": "^5.0.2"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^0.12.1"
+    "@11ty/eleventy": "^0.12.1",
+    "@parcel/transformer-sass": "^2.0.0",
+    "node-sass": "^6.0.1",
+    "npm-run-all": "^4.1.5",
+    "parcel": "^2.0.0",
+    "sass": "^1.35.2"
   }
 }
-

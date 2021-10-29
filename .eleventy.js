@@ -1,20 +1,10 @@
-module.exports = function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy({
-    "./node_modules/isanchezd1988-site-template/dist/bundles/scss/styles.css":
-      "styles.css"
-  });
-  eleventyConfig.addPassthroughCopy({
-    "./node_modules/isanchezd1988-site-template/dist/bundles/js/main.js": "main.js"
-  });
-  eleventyConfig.addPassthroughCopy({
-    "./node_modules/isanchezd1988-site-template/dist/bundles/assets/images/profile.png":
-    "profile.png"
-  });
-
+module.exports = function () {
   return {
     dir: {
       input: "./src", // Equivalent to Jekyll's source property
-      output: "./public", // Equivalent to Jekyll's destination property
+      output: "./dist", // Equivalent to Jekyll's destination property
     },
+    templateFormats: ["html", "md", "njk"],
+    passthroughFileCopy: true,
   };
 };
