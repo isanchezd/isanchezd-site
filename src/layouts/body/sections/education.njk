@@ -1,11 +1,11 @@
 <section class="resume-section" id="education">
     <div class="resume-section-content">
         <h2 class="mb-5">{{ education.title }}</h2>
-        {% for item in education.educations %}
+        {% for item in education.degrees %}
             <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                 <div class="flex-grow-1">
-                    <h3 class="mb-0">{{item.center}}</h3>
-                    <div class="subheading mb-3">{{item.course}}</div>
+                    <h3 class="mb-0">{{item.course}} </h3>
+                    <div class="subheading mb-3">{{item.center}}</div>
                 </div>
                 <div class="flex-shrink-0">
                     <span class="text-primary">{{item.date}}</span>
@@ -14,3 +14,4 @@
         {% endfor %}
     </div>
 </section>
+

@@ -1,0 +1,49 @@
+{
+  "title": "Habilidades",
+  "hardSkillsTitle": "Hard Skills",
+  "softSkillsTitle": "Soft Skills",
+  "hardSkills": [
+    {
+      "description": "Html5",
+      "iconClass": "fa-html5"
+    },
+    {
+      "description": "Css3",
+      "iconClass": "fa-css3-alt"
+    },
+    {
+      "description": "Javascript",
+      "iconClass": "fa-js-square"
+    },
+    {
+      "description": "Angular",
+      "iconClass": "fa-angular"
+    },
+    {
+      "description": "Bootstrap",
+      "iconClass": "fa-bootstrap"
+    },
+    {
+      "description": "Node.js",
+      "iconClass": "fa-node-js"
+    },
+    {
+      "description": "Scss",
+      "iconClass": "fa-sass"
+    }
+  ],
+  "softSkills": [
+    {
+      "description": "Trabajo en equipo"
+    },
+    {
+      "description": "Autodidacta"
+    },
+    {
+      "description": "Pragmatismo"
+    },
+    {
+      "description": "Integridad"
+    }
+  ]
+}

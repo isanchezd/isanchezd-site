@@ -4,11 +4,12 @@
   "description": "isanchezd1988 site builder",
   "default": "dist/index.html",
   "scripts": {
-    "start": "run-p eleventy:dev parcel:build",
-    "eleventy:dev": "npx @11ty/eleventy --serve",
+    "start": "run-s parcel:build eleventy:dev",
+    "eleventy:dev": "run-s eleventy:serve",
+    "eleventy:serve": "npx @11ty/eleventy --serve",
     "parcel:build": "run-p parcel:build:scss parcel:build:js parcel:build:images",
-    "parcel:build:scss": "parcel build src/scss/styles.scss --dist-dir dist",
-    "parcel:build:js": "parcel build src/js/main.js --dist-dir dist",
+    "parcel:build:scss": "parcel build src/assets/scss/styles.scss --dist-dir dist",
+    "parcel:build:js": "parcel build src/assets/js/main.js --dist-dir dist",
     "parcel:build:images": "parcel build src/assets/images/* --dist-dir dist"
   },
   "repository": {
