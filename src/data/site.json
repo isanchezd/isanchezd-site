@@ -1,0 +1,140 @@
+{
+  "title": "Iván Sánchez Díaz",
+  "personal": {
+    "name": "Iván Sánchez Díaz",
+    "description": "Autodidacta y con iniciativa. En mis ratos libres me gusta investigar y leer libros, blogs y tutoriales para poder crecer como desarrollador. Interesado en probar nuevas tecnologías y herramientas para evaluarlas y conocer su funcionamiento interno. Busco la mejora cualitativa de mi trabajo con ilusión, esfuerzo y responsabiliad para ser más óptimo y eficiente.",
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/iv%C3%A1n-s%C3%A1nchez-323b65ab/",
+      "github": "https://isanchezd1988.github.io/"
+    },
+    "email": "sanchez.diaz.ivan@gmail.com"
+  },
+  "experience": {
+    "title": "Experiencia",
+    "experiences": [
+      {
+        "position": "Senior Frontend Developer & Frontend Technical Lead",
+        "company": "Sopra Steria",
+        "description": "Responsable técnico de proyectos frontend en labores de desarrollo y mantenimiento de aplicaciones frontend (SPA) para el sector de los seguros, incluyendo tareas de supervisión del equipo de desarrollo.",
+        "technologies": [],
+        "time": "2019 - Actualidad"
+      },
+      {
+        "position": "Middle Frontend Developer & Frontend Technical Lead",
+        "company": "Vector ITC group",
+        "description": "Responsable técnico de proyectos frontend en labores de desarrollo y mantenimiento de aplicaciones frontend (SPA) asi como desarrollo de webcomponents para el sector bancario , incluyendo tareas de supervisión del equipo de desarrollo",
+        "technologies": [],
+        "time": "2016 - 2019"
+      },
+      {
+        "position": "Junior Fullstack Developer",
+        "company": "Inmedia studio",
+        "description": "Desarrollador Fullstack en labores de desarrollo y mantenmiento en aplicacion frontend hibrida (SPA) como labores de desarrollo y mantenimiento de backend (API) para el sector educativo",
+        "technologies": [],
+        "time": "2015 - 2016"
+      },
+      {
+        "position": "Junior Fullstack Developer",
+        "company": "Support Factory",
+        "description": "Desarrollador Fullstack en labores de desarrollo y mantenmiento en aplicacion frontend hibrida (SPAs) como labores de desarrollo y mantenimiento de backends (APIs) para el sector educativo y sector editorial",
+        "technologies": [],
+        "time": "2012 - 2015"
+      },
+      {
+        "position": "Junior Android Developer",
+        "company": "Oesia",
+        "description": "Desarrollo de una aplicación POC para el control por geoposicion de vehiculos de transporte",
+        "technologies": [],
+        "time": "2012"
+      }
+    ]
+  },
+  "education": {
+    "title": "Educación",
+    "degrees": [
+      {
+        "center": "I.E.S Clara del rey",
+        "course": "Tecnico Superior en Desarrollo de aplicaciones informaticas",
+        "date": "2010 - 2012"
+      },
+      {
+        "center": "I.E.S Clara del rey",
+        "course": "Tecnico en Explotación de sistemas informaticos",
+        "date": "2007 - 2009"
+      }
+    ]
+  },
+  "certification": {
+    "title": "Certificados",
+    "certifications": [
+      {
+        "center": "Codely TV",
+        "course": "Javascript Moderno",
+        "date": "2021"
+      },
+      {
+        "center": "Codely TV",
+        "course": "Arquitectura hexagonal",
+        "date": "2021"
+      },
+      {
+        "center": "Codely TV",
+        "course": "Principios SOLID aplicados",
+        "date": "2021"
+      }
+    ]
+  },
+  "skill": {
+    "title": "Habilidades",
+    "hardSkillsTitle": "Hard Skills",
+    "softSkillsTitle": "Soft Skills",
+    "hardSkills": [
+      {
+        "description": "Html5",
+        "iconClass": "fa-html5"
+      },
+      {
+        "description": "Css3",
+        "iconClass": "fa-css3-alt"
+      },
+      {
+        "description": "Javascript",
+        "iconClass": "fa-js-square"
+      },
+      {
+        "description": "Angular",
+        "iconClass": "fa-angular"
+      },
+      {
+        "description": "Bootstrap",
+        "iconClass": "fa-bootstrap"
+      },
+      {
+        "description": "Node.js",
+        "iconClass": "fa-node-js"
+      },
+      {
+        "description": "Scss",
+        "iconClass": "fa-sass"
+      }
+    ],
+    "softSkills": [
+      {
+        "description": "Trabajo en equipo"
+      },
+      {
+        "description": "Autodidacta"
+      },
+      {
+        "description": "Pragmatismo"
+      },
+      {
+        "description": "Integridad"
+      }
+    ]
+  },
+  "interest": {
+    "title": "Intereses",
+    "description": "Me encanta todo lo que tenga que ver la naturaleza. Donde este una buena ruta por el campo o la montaña que se quite lo demas. \n Tambien me encanta el cine (en especial el genero de fantasia y sci-fi), los videojuegos (soy amante de los RPG) y la musica (BSOsz, Rock, metal y synthwave)."
+    }
+}

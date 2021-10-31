@@ -1,7 +1,7 @@
-<section class="resume-section" id="experience">
-    <div class="resume-section-content">
-        <h2 class="mb-5">{{experience.title}}</h2>
-        {% for item in experience.experiences %}
+{% extends '../../../templates/section.njk' %}
+{% block content %}
+        <h2 class="mb-5">{{site.experience.title}}</h2>
+        {% for item in site.experience.experiences %}
             <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
             <div class="flex-grow-1">
                 <h3 class="mb-0">{{item.position}}</h3>
@@ -13,7 +13,6 @@
             </div>
         </div>
         {% endfor %}
-    </div>
-</section>
+{% endblock %}
 
 
