@@ -13,39 +13,34 @@
     "title": "Experiencia",
     "experiences": [
       {
-        "position": "Senior Frontend Developer & Frontend Technical Lead",
-        "company": "Sopra Steria",
+        "degree": "Senior Frontend Developer & Frontend Technical Lead",
+        "entity": "Sopra Steria",
         "description": "Responsable técnico de proyectos frontend en labores de desarrollo y mantenimiento de aplicaciones frontend (SPA) para el sector de los seguros, incluyendo tareas de supervisión del equipo de desarrollo.",
-        "technologies": [],
-        "time": "2019 - Actualidad"
+        "date": "2019 - Actualidad"
       },
       {
-        "position": "Middle Frontend Developer & Frontend Technical Lead",
-        "company": "Vector ITC group",
-        "description": "Responsable técnico de proyectos frontend en labores de desarrollo y mantenimiento de aplicaciones frontend (SPA) asi como desarrollo de webcomponents para el sector bancario , incluyendo tareas de supervisión del equipo de desarrollo",
-        "technologies": [],
-        "time": "2016 - 2019"
+        "degree": "Middle Frontend Developer & Frontend Technical Lead",
+        "entity": "Vector ITC group",
+        "description": "Responsable técnico de proyectos frontend en labores de desarrollo y mantenimiento de aplicaciones frontend (SPA) asi como desarrollo de webcomponents para el sector bancario, incluyendo tareas de supervisión del equipo de desarrollo.",
+        "date": "2016 - 2019"
       },
       {
-        "position": "Junior Fullstack Developer",
-        "company": "Inmedia studio",
-        "description": "Desarrollador Fullstack en labores de desarrollo y mantenmiento en aplicacion frontend hibrida (SPA) como labores de desarrollo y mantenimiento de backend (API) para el sector educativo",
-        "technologies": [],
-        "time": "2015 - 2016"
+        "degree": "Junior Fullstack Developer",
+        "entity": "Inmedia studio",
+        "description": "Desarrollador Fullstack en labores de desarrollo y mantenmiento en aplicacion frontend hibrida (SPA) como labores de desarrollo y mantenimiento de backend (API) para el sector educativo.",
+        "date": "2015 - 2016"
       },
       {
-        "position": "Junior Fullstack Developer",
-        "company": "Support Factory",
-        "description": "Desarrollador Fullstack en labores de desarrollo y mantenmiento en aplicacion frontend hibrida (SPAs) como labores de desarrollo y mantenimiento de backends (APIs) para el sector educativo y sector editorial",
-        "technologies": [],
-        "time": "2012 - 2015"
+        "degree": "Junior Fullstack Developer",
+        "entity": "Support Factory",
+        "description": "Desarrollador Fullstack en labores de desarrollo y mantenmiento en aplicacion frontend hibrida (SPAs) como labores de desarrollo y mantenimiento de backends (APIs) para el sector educativo y sector editorial.",
+        "date": "2012 - 2015"
       },
       {
-        "position": "Junior Android Developer",
-        "company": "Oesia",
-        "description": "Desarrollo de una aplicación POC para el control por geoposicion de vehiculos de transporte",
-        "technologies": [],
-        "time": "2012"
+        "degree": "Junior Android Developer",
+        "entity": "Oesia",
+        "description": "Desarrollo de una aplicación POC para el control por geoposicion de vehiculos de transporte.",
+        "date": "2012"
       }
     ]
   },
@@ -53,13 +48,13 @@
     "title": "Educación",
     "degrees": [
       {
-        "center": "I.E.S Clara del rey",
-        "course": "Tecnico Superior en Desarrollo de aplicaciones informaticas",
+        "entity": "I.E.S Clara del rey",
+        "degree": "Tecnico Superior en Desarrollo de aplicaciones informaticas",
         "date": "2010 - 2012"
       },
       {
-        "center": "I.E.S Clara del rey",
-        "course": "Tecnico en Explotación de sistemas informaticos",
+        "entity": "I.E.S Clara del rey",
+        "degree": "Tecnico en Explotación de sistemas informaticos",
         "date": "2007 - 2009"
       }
     ]
@@ -68,18 +63,18 @@
     "title": "Certificados",
     "certifications": [
       {
-        "center": "Codely TV",
-        "course": "Javascript Moderno",
+        "entity": "Codely TV",
+        "degree": "Javascript Moderno",
         "date": "2021"
       },
       {
-        "center": "Codely TV",
-        "course": "Arquitectura hexagonal",
+        "entity": "Codely TV",
+        "degree": "Arquitectura hexagonal",
         "date": "2021"
       },
       {
-        "center": "Codely TV",
-        "course": "Principios SOLID aplicados",
+        "entity": "Codely TV",
+        "degree": "Principios SOLID aplicados",
         "date": "2021"
       }
     ]

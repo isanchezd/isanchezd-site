@@ -1,11 +1,12 @@
-{% extends '../../../templates/section.njk' %}
+{% set sectionId= "certifications" %}
+{% extends '../../templates/section.njk' %}
 {% block content %}
         <h2 class="mb-5">{{ site.certification.title }}</h2>
         {% for item in site.certification.certifications %}
             <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                 <div class="flex-grow-1">
-                    <h3 class="mb-0">{{item.course}} </h3>
-                    <div class="subheading mb-3">{{item.center}}</div>
+                    <h3 class="mb-0">{{item.degree}} </h3>
+                    <div class="subheading mb-3">{{item.entity}}</div>
                 </div>
                 <div class="flex-shrink-0">
                     <span class="text-primary">{{item.date}}</span>

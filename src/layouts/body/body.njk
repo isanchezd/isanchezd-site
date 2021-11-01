@@ -1,32 +1,22 @@
-        <!-- Navigation-->
-        {% include 'body/navigation.njk' %}
-
-        <!-- Page Content-->
-        <div class="container-fluid p-0">
-            <!-- About-->
-            {% set sectionId= "about" %}
-            {% include 'body/sections/about.njk' %}
-            <hr class="m-0" />
-            <!-- Experience-->
-            {% set sectionId= "experience" %}
-            {% include 'body/sections/experience.njk' %}
-            <hr class="m-0" />
-            <!-- Education-->
-            {% set sectionId= "education" %}
-            {% include 'body/sections/education.njk' %}
-            <hr class="m-0" />
-            <!-- Certifications -->
-            {% set sectionId= "certifications" %}
-            {% include 'body/sections/certification.njk' %}
-            <hr class="m-0" />
-            <!-- Skills-->
-            {% set sectionId= "skills" %}
-            {% include 'body/sections/skill.njk' %}
-            <hr class="m-0" />
-            <!-- Interests-->
-            {% set sectionId= "interests" %}
-            {% include 'body/sections/interest.njk' %}
-            <hr class="m-0" />
-        </div>
-        <!-- Core theme JS-->
-        <script src="main.js"></script>
+{% include './navigation.njk' %}
+<div class="container-fluid p-0">
+    {% if site.personal %}
+        {% include './sections/about.njk' %} <hr class="m-0"/>
+    {% endif %}
+    {% if site.experience %}
+        {% include './sections/experience.njk' %} <hr class="m-0"/>
+    {% endif %}
+    {% if site.education %}
+        {% include './sections/education.njk' %} <hr class="m-0"/>
+    {% endif %}
+    {% if site.education %}
+        {% include './sections/certification.njk' %} <hr class="m-0"/>
+    {% endif %}
+    {% if site.skill %}
+        {% include './sections/skill.njk' %} <hr class="m-0"/>
+    {% endif %}
+    {% if site.interest %}
+        {% include './sections/interest.njk' %} <hr class="m-0"/>
+    {% endif %}
+</div>
+<script src="main.js"></script>

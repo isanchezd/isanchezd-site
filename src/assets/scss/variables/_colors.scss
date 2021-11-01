@@ -2,14 +2,17 @@
 // Colors
 // 
 
-// Pre-state grayscale colors used in other variables
+// Custom Vars
 
-$gray-800: #343a40;
+$main-colour: #276E90;
+$first-colour: #CECFC9;
+$darkness-colour: #0A3143;
+$light-colour: #EFEFEF;
 
-// Override Bootstrap color system
-
-$primary-theme: #343a40;
 
 // Override Bootstrap default state colors
 
-$primary: $primary-theme;
+$primary: $main-colour;
+$body-bg: $light-colour;
+
+
