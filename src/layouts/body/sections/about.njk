@@ -1,0 +1,21 @@
+{% set sectionId= "about" %}
+{% extends '../../templates/section.njk' %}
+{% block content %}
+    <div class="mb-5">
+        <h1>
+            {{ site.personal.name }}
+        </h1>
+        <p class="lead mt-5">{{ site.personal.description }}</p>
+    </div>
+    <div class="social-icons mt-5">
+        <a class="social-icon" href="{{ site.personal.social.linkedin }}">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a class="social-icon" href="{{ site.personal.social.github }}">
+            <i class="fab fa-github"></i>
+        </a>
+        <a class="social-icon" href="mailto:{{ site.personal.email }}">
+            <i class="fa fa-envelope"></i>
+        </a>
+    </div>
+{% endblock %}

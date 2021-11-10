@@ -1,0 +1,40 @@
+{
+  "name": "isanchezd1988-site",
+  "version": "1.0.0",
+  "description": "isanchezd1988 site builder",
+  "default": "dist/index.html",
+  "scripts": {
+    "start": "run-s parcel:build eleventy:dev",
+    "build": "run-s parcel:build eleventy:build",
+    "eleventy:dev": "run-s eleventy:serve",
+    "eleventy:serve": "npx @11ty/eleventy --serve",
+    "eleventy:build": "npx @11ty/eleventy",
+    "parcel:build": "run-p parcel:build:scss parcel:build:js parcel:build:images",
+    "parcel:build:scss": "parcel build src/assets/scss/styles.scss --dist-dir dist",
+    "parcel:build:js": "parcel build src/assets/js/main.js --dist-dir dist",
+    "parcel:build:images": "parcel build src/assets/images/* --dist-dir dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isanchezd1988/isanchezd1988-site.git"
+  },
+  "author": "Iván Sánchez <sanchez.diaz.ivan@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/isanchezd1988/isanchezd1988-site/issues"
+  },
+  "homepage": "https://github.com/isanchezd1988/isanchezd1988-site#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3",
+    "@popperjs/core": "^2.9.2",
+    "bootstrap": "^5.0.2"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "@parcel/transformer-sass": "^2.0.0",
+    "node-sass": "^6.0.1",
+    "npm-run-all": "^4.1.5",
+    "parcel": "^2.0.0",
+    "sass": "^1.35.2"
+  }
+}

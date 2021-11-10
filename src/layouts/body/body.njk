@@ -1,0 +1,22 @@
+{% include './navigation.njk' %}
+<div class="container-fluid p-0">
+    {% if site.personal %}
+        {% include './sections/about.njk' %} <hr class="m-0"/>
+    {% endif %}
+    {% if site.experience %}
+        {% include './sections/experience.njk' %} <hr class="m-0"/>
+    {% endif %}
+    {% if site.education %}
+        {% include './sections/education.njk' %} <hr class="m-0"/>
+    {% endif %}
+    {% if site.education %}
+        {% include './sections/certification.njk' %} <hr class="m-0"/>
+    {% endif %}
+    {% if site.skill %}
+        {% include './sections/skill.njk' %} <hr class="m-0"/>
+    {% endif %}
+    {% if site.interest %}
+        {% include './sections/interest.njk' %} <hr class="m-0"/>
+    {% endif %}
+</div>
+<script src="main.js"></script>
