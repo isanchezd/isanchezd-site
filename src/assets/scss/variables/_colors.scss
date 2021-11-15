@@ -4,15 +4,14 @@
 
 // Custom Vars
 
-$main-colour: #276E90;
-$first-colour: #CECFC9;
-$darkness-colour: #0A3143;
-$light-colour: #EFEFEF;
+$base-color: #1E1E1E;
+$text-color: #EFEFEF;
+$title-color: #8D54FC;
+$icon-bg-color: $title-color;
+$icon-bg-color-hover: #5500ff;
+$separation-lines-color: #5a5b5b;
 
 
 // Override Bootstrap default state colors
-
-$primary: $main-colour;
-$body-bg: $light-colour;
 
 
