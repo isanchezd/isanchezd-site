@@ -14,8 +14,8 @@
         justify-content: center;
         height: 3.5rem;
         width: 3.5rem;
-        background-color: $icon-bg-color;
-        color: $white;
+        background-color: $text-color;
+        color: $base-color;
         border-radius: 100%;
         font-size: 1.5rem;
         margin-right: 1.5rem;
@@ -25,7 +25,7 @@
         }
 
         &:hover {
-            background-color: $icon-bg-color-hover;
+            background-color: $title-color;
         }
     }
 }

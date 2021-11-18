@@ -7,11 +7,13 @@
 $base-color: #1E1E1E;
 $text-color: #EFEFEF;
 $title-color: #8D54FC;
-$icon-bg-color: $title-color;
-$icon-bg-color-hover: #5500ff;
-$separation-lines-color: #5a5b5b;
+$separation-lines-color: #2a2a2a;
 
 
 // Override Bootstrap default state colors
 
+$primary: $base-color;
 
+$navbar-dark-color:                 $text-color;
+$navbar-dark-hover-color:           $title-color;
+$navbar-dark-active-color:          $text-color;
