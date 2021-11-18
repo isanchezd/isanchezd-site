@@ -4,6 +4,9 @@
 
 // Styling for the rounded social media links
 
+
+
+
 .social-icons {
     .social-icon {
         display: inline-flex;
@@ -11,8 +14,8 @@
         justify-content: center;
         height: 3.5rem;
         width: 3.5rem;
-        background-color: $darkness-colour;
-        color: $white;
+        background-color: $text-color;
+        color: $base-color;
         border-radius: 100%;
         font-size: 1.5rem;
         margin-right: 1.5rem;
@@ -22,7 +25,7 @@
         }
 
         &:hover {
-            background-color: $primary;
+            background-color: $title-color;
         }
     }
 }

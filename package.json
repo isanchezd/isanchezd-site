@@ -1,6 +1,6 @@
 {
   "name": "isanchezd1988-site",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "isanchezd1988 site builder",
   "default": "dist/index.html",
   "scripts": {
