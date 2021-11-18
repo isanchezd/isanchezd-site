@@ -4,7 +4,8 @@
 
 body {
     padding-top: $navbar-base-height;
-    color: $darkness-colour;
+    color: $text-color;
+    background-color: $base-color;
 }
 
 @include media-breakpoint-up(lg) {
@@ -14,6 +15,10 @@ body {
     }
 }
 
+hr {
+    background-color: $separation-lines-color;
+    opacity: 1;
+}
 
 h1 {
     line-height: 1;
@@ -30,3 +35,15 @@ p.lead {
     font-weight: 500;
     font-size: 1.5rem;
 }
+
+.nav-link {
+    color: #EFEFEF;
+    &:hover {
+       color: $title-color;
+    }
+}
+
+.dates {
+    color: $title-color;
+}
+

@@ -2,6 +2,16 @@
 // Styles
 // 
 
+@font-face {
+    font-family: "Proxima Nova Bold";
+    src: url("../fonts/prixima-nova-bold.ttf");
+}
+
+@font-face {
+    font-family: "Proxima Nova Regular";
+    src: url("../fonts/prixima-nova-regular.ttf");
+}
+
 // Import variables
 @import "./variables.scss";
 
@@ -9,9 +19,9 @@
 @import "../../../node_modules//@fortawesome/fontawesome-free/scss/fontawesome.scss";
 
 // Import Bootstrap
-//@import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
 // Configuration
+
 @import "../../../node_modules//bootstrap/scss/functions";
 @import "../../../node_modules//bootstrap/scss/variables";
 @import "../../../node_modules//bootstrap/scss/mixins";

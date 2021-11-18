@@ -2,16 +2,17 @@
 // Variables
 //
 
-
 // Override Bootstrap typography variables
 
-$font-family-base: "IBM Plex Mono", Arial, Sans-serif;
+$font-family-base: "Proxima Nova Regular", Arial, Sans-serif;
 
-$headings-font-family: "Chakra Petch", Arial, Sans-serif;
+$headings-font-family: "Proxima Nova Bold", Arial, Sans-serif;
 
 $headings-font-weight: 700;
 
-$headings-color: $darkness-colour;
+$headings-color: $title-color;
+
+$nav-link: $text-color;
 
 $h1-font-size: 4rem;
 $h2-font-size: 3rem;
