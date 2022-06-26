@@ -1,0 +1,93 @@
+// Dracula Pallete
+$site-bg: #1E1E1E;
+$site-fg: #EFEFEF;
+$site-selected: #44475a;
+$site-cyan: #8be9fd;
+$site-green: #50fa7b;
+$site-pink: #ff79c6;
+$site-purple: #8D54FC;
+$site-red: #ff5555;
+$site-yellow: #f1fa8c;
+
+$text-color: #EFEFEF;
+
+
+$deep-black: #0a0a0a;
+// Update Bulma's global variables
+// read more: https://bulma.io/documentation/customize/variables/
+$primary: #0072ce;
+
+$link: $site-pink;
+$link-hover: lighten($site-pink, 5%);
+$link-hover-border: lighten($site-pink, 5%);
+$link-focus: darken($site-pink, 5%);
+$link-focus-border: darken($site-pink, 5%);
+$link-active: lighten($site-pink, 5%);
+$link-active-border: lighten($site-pink, 5%);
+
+$info: $site-cyan;
+$success: $site-green;
+$warning: $site-yellow;
+$danger: $site-red;
+$dark: $site-selected;
+$grey: $site-fg;
+
+$text: $site-fg;
+$text-light: lighten($site-fg, 5%);
+$text-strong: darken($site-fg, 5%);
+
+$background: $site-bg;
+
+$green-invert: $site-bg;
+$success-invert: $site-bg;
+
+// Update some of Bulma's component variables
+$title-color: $site-fg;
+$subtitle-color: $site-fg;
+$subtitle-strong-color: darken($site-fg, 5%);
+
+$body-background-color: $site-bg;
+$footer-background-color: $site-bg;
+
+$code-background: $site-selected;
+$label-color: $site-fg;
+$card-color: $site-bg;
+
+// button
+$button-color: $site-bg;
+$button-static-color: $site-bg;
+
+// message
+$message-body-color: $site-bg;
+
+// form
+$input-placeholder-color: lighten($site-selected, 20%);
+$input-color: $site-selected;
+$input-icon-color: lighten($site-selected, 20%);
+$input-icon-active-color: $site-selected;
+
+// form -- select
+$input-hover-color: $site-pink;
+
+
+// table
+$table-background-color: $site-bg;
+
+$table-head-background-color: $deep-black;
+$table-foot-background-color: $deep-black;
+
+$table-row-hover-background-color: lighten($site-selected, 10%);
+$table-row-active-background-color: $site-selected;
+$table-striped-row-even-background-color: $site-selected;
+$table-striped-row-even-hover-background-color: lighten($site-selected, 10%);
+
+// box
+$box-background-color: $deep-black;
+
+// media
+$media-border-color: $site-fg;
+
+:root {
+  --theme-color: #0072ce;
+  --thin-color: #b5b5b5;
+}
