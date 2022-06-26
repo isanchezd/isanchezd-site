@@ -12,7 +12,7 @@
         </div>
         <div class="column is-2">
           <figure class="image image is-128x128">
-            <img alt="Profile photo" class="is-rounded" src="~/assets/profile.jpg" style="height:8rem" />
+            <img alt="Profile photo" class="is-rounded" src="~/assets/profile.webp" style="height:8rem" />
           </figure>
         </div>
         <div class="column has-text-grey-light has-text-right-in-desktop">
