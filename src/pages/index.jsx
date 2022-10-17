@@ -3,8 +3,11 @@ import Head from 'next/head'
 import { ProfileSection } from '../sections/ProfileSection'
 import { MainSection } from '../sections/MainSection'
 
-export default function Home(props) {
-  const { basics, work, education, certificates, skills, languages } = props
+import resume from 'isanchezd-resume/isanchezd-resume.json';
+
+
+export default function Home() {
+  const { basics, work, education, certificates, skills, languages } = resume
 
   return (
     <>
@@ -39,18 +42,4 @@ export default function Home(props) {
     </>
   );
 }
-import fsPromises from 'fs/promises'
-import path from 'path'
 
-export async function getStaticProps() {
-  const filePath = path.join(
-    process.cwd(),
-    './node_modules/isanchezd-resume/isanchezd-resume.json'
-  )
-  const jsonData = await fsPromises.readFile(filePath)
-  const objectData = JSON.parse(jsonData)
-
-  return {
-    props: objectData,
-  }
-}
