@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next export",
+    "build-prod": "run-s clean build export",
+    "clean": "rimraf .next out"
   },
   "dependencies": {
     "bulma": "^0.9.4",
