@@ -1,0 +1,45 @@
+---
+import '../styles/styles.scss';
+import 'bootstrap-icons/font/bootstrap-icons.min.css';
+import MainLayout from '../layouts/main.astro';
+---
+
+<MainLayout />
+
+<script>
+  import boostrap from 'bootstrap/js/index.umd';
+
+  window.addEventListener('DOMContentLoaded', onDocumentLoaded);
+
+  function onDocumentLoaded() {
+    // Activate Bootstrap scrollspy on the main nav element
+    const sideNav = document.body.querySelector('#sideNav');
+    if (sideNav) {
+      new boostrap.ScrollSpy(document.body, {
+        target: '#sideNav',
+        rootMargin: '0px 0px -40%',
+      });
+    }
+
+    // Collapse responsive navbar when toggler is visible
+    const navbarToggler = document.body.querySelector('.navbar-toggler');
+
+    const responsiveNavItems = [].slice.call(
+      document.querySelectorAll('#navbarResponsive .nav-link')
+    );
+
+    responsiveNavItems.map(function (responsiveNavItem) {
+      responsiveNavItem.addEventListener('click', () => onClickInNavbarItems(navbarToggler));
+    });
+  }
+
+
+  function onClickInNavbarItems(navbarToggler) {
+    const isNavbarTogglerVisible =
+      window.getComputedStyle(navbarToggler).display !== 'none';
+
+    if (isNavbarTogglerVisible) {
+      navbarToggler.click();
+    }
+  }
+</script>
