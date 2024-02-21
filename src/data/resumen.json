@@ -1,0 +1,792 @@
+{
+  "$schema": "https://raw.githubusercontent.com/getmanfred/mac/v0.5/schema/schema.json",
+  "settings": {
+    "language": "ES",
+    "MACVersion": "0.5"
+  },
+  "aboutMe": {
+    "profile": {
+      "name": "Iván",
+      "surnames": "Sánchez Díaz",
+      "title": "Software Web Developer",
+      "description": "Working in web development for the past 10 years as a full-stack developer with JavaScript, I have pragmatically applied software development principles such as SOLID, YAGNI, KISS, DRY in teams led by agile methodologies (Scrum, Kanban), and hybrid methodologies (Agile-waterfall Hybrid) in sectors such as education, publishing, and finance. This has provided me with a comprehensive understanding of the analysis, design, development, and deployment of web applications in these sectors.\n\nAdditionally, I enjoy mentoring because when I first started in the field, I would have appreciated having someone by my side to guide me on how to do things right. Since then, I've adopted the motto 'Be the mentor you wish you had.'\n\nIn addition to my professional experience, I also enjoy tinkering with other tools outside of my daily work to experiment and learn how things are done with different tools and technologies.\n\n\n\n",
+      "avatar": {
+        "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/24/02/17/90b5074d-b817-4ce3-ac3e-197b27128e0e_profile.png",
+        "alt": "profile.png"
+      },
+      "location": {
+        "notes": "Autocompleted using Google Maps API (id: ChIJgTwKgJcpQg0RaSKMYcHeNsQ)",
+        "country": "España",
+        "region": "Comunidad de Madrid",
+        "municipality": "Madrid"
+      }
+    },
+    "recommendations": [
+      {
+        "title": "Clean Architecture: a craftsman's guide to software structure and design",
+        "type": "reading",
+        "summary": "Libro sobre como construir aplicaciones robustas, escalables y mantenibles",
+        "authors": [
+          {
+            "name": "Robert",
+            "surnames": "C Martin",
+            "title": "Author"
+          }
+        ]
+      },
+      {
+        "title": "Codigo Sostenible",
+        "type": "reading",
+        "summary": "Libro sobre como hacer codigo sostenible, que se pueda mantener y escalar con facilidad asi como el poder probar a testarlo ",
+        "authors": [
+          {
+            "name": "Carlos",
+            "surnames": "blé",
+            "title": "Author"
+          }
+        ]
+      },
+      {
+        "title": "Roadmap.sh",
+        "type": "other",
+        "URL": "https://roadmap.sh/"
+      }
+    ],
+    "relevantLinks": [
+      {
+        "type": "linkedin",
+        "URL": "https://www.linkedin.com/in/isanchezd/"
+      },
+      {
+        "type": "github",
+        "URL": "https://github.com/isanchezd1988"
+      },
+      {
+        "type": "twitter",
+        "URL": "https://twitter.com/isanchezd88"
+      }
+    ]
+  },
+  "experience": {
+    "jobs": [
+      {
+        "organization": {
+          "name": "Redradix",
+          "image": {
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/22/06/11/6f274d89-4a6b-46dc-9693-e0fac82f4721_og-image-400x400.jpeg",
+            "alt": "og-image-400x400.jpeg"
+          },
+          "URL": "https://redradix.com/"
+        },
+        "roles": [
+          {
+            "name": "Senior FullStack Developer",
+            "startDate": "2022-06-01",
+            "challenges": [
+              {
+                "description": "Development of an application for the online gaming sector, consisting of a web application composed of a React-based Single Page Application (SPA) and an API using Strapi CMS, orchestrated on a Docker-based infrastructure. Analysis, definition, and execution of data migration from WordPress to Strapi CMS."
+              }
+            ],
+            "competences": [
+              {
+                "name": "CMS",
+                "type": "technology"
+              },
+              {
+                "name": "Cypress",
+                "type": "technology"
+              },
+              {
+                "name": "Docker",
+                "type": "technology"
+              },
+              {
+                "name": "JavaScript",
+                "type": "technology"
+              },
+              {
+                "name": "Jest",
+                "type": "technology"
+              },
+              {
+                "name": "NodeJS",
+                "type": "technology"
+              },
+              {
+                "name": "React",
+                "type": "technology"
+              },
+              {
+                "name": "Scss",
+                "type": "technology"
+              },
+              {
+                "name": "TypeScript",
+                "type": "technology"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "organization": {
+          "name": "Sopra Steria",
+          "image": {
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/22/03/31/6d1e51fa-4b75-45ca-81ee-af617e8169e8_logo-asociados-sopra.jpeg",
+            "alt": "logo-asociados-soprasteria.jpeg"
+          },
+          "URL": "https://www.soprasteria.es/"
+        },
+        "roles": [
+          {
+            "name": "Senior Frontend Developer & Frontend Team Leader",
+            "startDate": "2019-06-01",
+            "challenges": [
+              {
+                "description": "Technical lead for frontend projects, performing tasks such as analysis, development, evolution, and maintenance of web applications (SPAs) and web component libraries using Angular as the primary technology, as well as overseeing and managing team"
+              }
+            ],
+            "competences": [
+              {
+                "name": "Angular2+",
+                "type": "technology"
+              },
+              {
+                "name": "Bootstrap",
+                "type": "technology"
+              },
+              {
+                "name": "HTML",
+                "type": "technology"
+              },
+              {
+                "name": "JavaScript",
+                "type": "technology"
+              },
+              {
+                "name": "Scss",
+                "type": "technology"
+              },
+              {
+                "name": "TypeScript",
+                "type": "technology"
+              },
+              {
+                "name": "WebComponents",
+                "type": "technology"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "organization": {
+          "name": "Vector ITC Group",
+          "image": {
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/22/03/31/ff89d0a2-bdaf-4e4d-9780-887cc4aa1828_vector-itc-marca-col.png",
+            "alt": "Vector-ITC-Marca-Color.png"
+          }
+        },
+        "roles": [
+          {
+            "name": "Middle Frontend Developer & Frontend Team Leader",
+            "startDate": "2016-08-01",
+            "finishDate": "2019-06-01",
+            "challenges": [
+              {
+                "description": "Technical lead for frontend projects, conducting tasks related to analysis, development, evolution, and maintenance of web applications (SPAs) using AngularJS and Angular as the primary technologies, alongside supervision and team management responsibilities in the financial sector."
+              }
+            ],
+            "competences": [
+              {
+                "name": "AngularJS",
+                "type": "technology"
+              },
+              {
+                "name": "Bootstrap",
+                "type": "technology"
+              },
+              {
+                "name": "CSS",
+                "type": "technology"
+              },
+              {
+                "name": "HTML",
+                "type": "technology"
+              },
+              {
+                "name": "JavaScript",
+                "type": "technology"
+              },
+              {
+                "name": "React",
+                "type": "technology"
+              },
+              {
+                "name": "Scss",
+                "type": "technology"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "organization": {
+          "name": "Inmedia Studio",
+          "image": {
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/22/03/31/4e785909-ec9b-4e87-baa2-e847e9ddb5c7_inmediastudio_480.png",
+            "alt": "inMediaStudio_480.png"
+          }
+        },
+        "roles": [
+          {
+            "name": "FullStack Developer",
+            "startDate": "2015-05-01",
+            "finishDate": "2016-08-01",
+            "challenges": [
+              {
+                "description": "Fullstack developer performing tasks related to development, evolution, and maintenance in web applications (MPA & SPA), hybrid applications, and APIs using LAMP, Codeigniter, AngularJS, NWJS, and Cordova as the main technologies"
+              }
+            ],
+            "competences": [
+              {
+                "name": "AngularJS",
+                "type": "technology"
+              },
+              {
+                "name": "CodeIgniter",
+                "type": "technology"
+              },
+              {
+                "name": "Electron",
+                "type": "technology"
+              },
+              {
+                "name": "Gulp.JS",
+                "type": "technology"
+              },
+              {
+                "name": "MySQL",
+                "type": "technology"
+              },
+              {
+                "name": "NodeJS",
+                "type": "technology"
+              },
+              {
+                "name": "PHP",
+                "type": "technology"
+              },
+              {
+                "name": "PHPMyAdmin",
+                "type": "technology"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "organization": {
+          "name": "Support Factory",
+          "image": {
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/22/03/31/b074bbef-c1d0-42a6-8545-12b36c5789c8_2021-01-11.jpeg",
+            "alt": "2021-01-11.jpeg"
+          },
+          "URL": "https://www.supportfactory.net/"
+        },
+        "roles": [
+          {
+            "name": "Junior Fullstack Developer",
+            "startDate": "2012-06-01",
+            "finishDate": "2015-05-01",
+            "challenges": [
+              {
+                "description": "Fullstack developer carrying out development, evolution, and maintenance tasks in web applications (MPA & SPA), hybrid applications, and APIs using LAMP, jQuery, and Cordova as the main technologies."
+              }
+            ],
+            "competences": [
+              {
+                "name": "CSS",
+                "type": "technology"
+              },
+              {
+                "name": "Cordova",
+                "type": "technology"
+              },
+              {
+                "name": "HTML",
+                "type": "technology"
+              },
+              {
+                "name": "JSON",
+                "type": "technology"
+              },
+              {
+                "name": "JavaScript",
+                "type": "technology"
+              },
+              {
+                "name": "PHP",
+                "type": "technology"
+              },
+              {
+                "name": "PHPMyAdmin",
+                "type": "technology"
+              },
+              {
+                "name": "REST",
+                "type": "technology"
+              },
+              {
+                "name": "jQuery",
+                "type": "technology"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "organization": {
+          "name": "Grupo Oesia",
+          "image": {
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/22/03/31/ba500c17-9297-4db3-b089-845c8d74ec81_logo_oesia_011.png",
+            "alt": "logo_oesia_011.png"
+          },
+          "URL": "https://grupooesia.com/"
+        },
+        "roles": [
+          {
+            "name": "Junior Android Developer",
+            "startDate": "2012-03-01",
+            "finishDate": "2012-06-01",
+            "challenges": [
+              {
+                "description": "Development of a native Android application for the geoposition-based control of transportation vehicles."
+              }
+            ],
+            "competences": [
+              {
+                "name": "Android",
+                "type": "technology"
+              },
+              {
+                "name": "Android SDK",
+                "type": "technology"
+              },
+              {
+                "name": "Android Studio",
+                "type": "technology"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "knowledge": {
+    "languages": [
+      {
+        "name": "EN",
+        "fullName": "Inglés",
+        "level": "Professional working proficiency"
+      },
+      {
+        "name": "ES",
+        "fullName": "Español",
+        "level": "Native or bilingual proficiency"
+      }
+    ],
+    "hardSkills": [
+      {
+        "skill": {
+          "name": "Angular2+",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "Bootstrap",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "CMS",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "CSS",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "Docker",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "Express",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "HTML",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "JavaScript",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "MongoDB",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "NodeJS",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "PostgreSQL",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "React",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "Scss",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "Tailwind",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "TypeScript",
+          "type": "technology"
+        }
+      }
+    ],
+    "studies": [
+      {
+        "studyType": "certification",
+        "degreeAchieved": false,
+        "name": "Angular - The complete guide",
+        "startDate": "2021-12-01",
+        "institution": {
+          "name": "Udemy",
+          "URL": "https://www.udemy.com/certificate/UC-05b333d0-745d-4af1-b696-278007195575/",
+          "image": {
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/08/08/14b6962b-a8e3-45ec-bdba-ea49d687922a_logo-udemy.svg",
+            "alt": "logo-udemy.svg"
+          }
+        },
+        "linkedCompetences": [
+          {
+            "name": "Angular2+",
+            "type": "technology"
+          }
+        ]
+      },
+      {
+        "studyType": "certification",
+        "degreeAchieved": false,
+        "name": "Arquitectura Hexagonal",
+        "startDate": "2021-05-01",
+        "institution": {
+          "name": "Codely TV",
+          "URL": "https://drive.google.com/file/d/13p1Nl85sUWhXKCrVj_QRz13tr8sr-RaL/view",
+          "image": {
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/08/08/f0dd65aa-f312-46e5-8375-ba98ec363375_logo-codelytv_qdtokp.png",
+            "alt": "logo-codelytv_qdtokp.png"
+          }
+        }
+      },
+      {
+        "studyType": "certification",
+        "degreeAchieved": false,
+        "name": "Curso de maquetacion ",
+        "startDate": "2022-12-01",
+        "institution": {
+          "name": "Classe",
+          "URL": "https://drive.google.com/file/d/1X08KRnnbTcVrW4hxJKYSrh4rdWtPp4Tw/view",
+          "image": {
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/08/08/73812519-b19f-4b9e-9e49-4e6686a3ceeb_1664376114377.jpeg",
+            "alt": "1664376114377.jpeg"
+          }
+        },
+        "linkedCompetences": [
+          {
+            "name": "CSS",
+            "type": "technology"
+          },
+          {
+            "name": "HTML",
+            "type": "technology"
+          }
+        ]
+      },
+      {
+        "studyType": "certification",
+        "degreeAchieved": false,
+        "name": "Javascript Moderno",
+        "startDate": "2021-07-01",
+        "institution": {
+          "name": "Codely TV",
+          "URL": "https://drive.google.com/file/d/1EapnY6viJTkiR-jCqXdpFaSccyiYzYgN/view",
+          "image": {
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/08/08/a382f637-d555-420e-ae81-be4252744c82_logo-codelytv_qdtokp.png",
+            "alt": "logo-codelytv_qdtokp.png"
+          }
+        },
+        "linkedCompetences": [
+          {
+            "name": "JavaScript",
+            "type": "technology"
+          }
+        ]
+      },
+      {
+        "studyType": "certification",
+        "degreeAchieved": false,
+        "name": "Principios SOLID Aplicados",
+        "startDate": "2021-01-01",
+        "institution": {
+          "name": "Codely TV",
+          "URL": "https://drive.google.com/file/d/1g7s2wke4wBuNSv5F1SQP4rKFc9TPCrbL/view",
+          "image": {
+            "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/08/08/f50172ac-b3df-40e9-8cc3-428bd44898f5_logo-codelytv_qdtokp.png",
+            "alt": "logo-codelytv_qdtokp.png"
+          }
+        }
+      },
+      {
+        "studyType": "officialDegree",
+        "degreeAchieved": true,
+        "name": "Técnico Superior en Desarrollo de Aplicaciones Informáticas",
+        "startDate": "2011-09-01",
+        "institution": {
+          "name": "I.E.S Clara del Rey",
+          "description": "Titulo de Formación Profesional de Grado Superior orientado al desarrollo de aplicaciones informáticos"
+        },
+        "finishDate": "2013-06-01",
+        "linkedCompetences": [
+          {
+            "name": "C",
+            "type": "technology"
+          },
+          {
+            "name": "JAVA",
+            "type": "technology"
+          },
+          {
+            "name": "JavaScript",
+            "type": "technology"
+          },
+          {
+            "name": "Linux",
+            "type": "technology"
+          },
+          {
+            "name": "PHP",
+            "type": "technology"
+          },
+          {
+            "name": "Windows",
+            "type": "technology"
+          }
+        ]
+      },
+      {
+        "studyType": "officialDegree",
+        "degreeAchieved": true,
+        "name": "Técnico en Explotación de Sistemas Informáticos",
+        "startDate": "2007-09-01",
+        "institution": {
+          "name": "I.E.S Clara del Rey",
+          "description": "Titulo de Formación Profesional de Grado medio orientado a la instalación, configuración y matenimiento de equipos informaticos con Windows, Windows Server  y GNU/Linux",
+          "URL": "https://iesclaradelrey.es/portal/index.php/es/"
+        },
+        "finishDate": "2009-06-01",
+        "linkedCompetences": [
+          {
+            "name": "Lamp",
+            "type": "technology"
+          },
+          {
+            "name": "Linux",
+            "type": "technology"
+          },
+          {
+            "name": "MySQL",
+            "type": "technology"
+          },
+          {
+            "name": "Windows",
+            "type": "technology"
+          }
+        ]
+      }
+    ],
+    "softSkills": [
+      {
+        "skill": {
+          "name": "Capacidad de mentorización",
+          "type": "practice"
+        }
+      },
+      {
+        "skill": {
+          "name": "Comunicación escrita",
+          "type": "practice"
+        }
+      },
+      {
+        "skill": {
+          "name": "Pensamiento analítico",
+          "type": "practice"
+        }
+      }
+    ]
+  },
+  "careerPreferences": {
+    "contact": {
+      "publicProfiles": [
+        {
+          "URL": "https://www.linkedin.com/in/isanchezd/",
+          "type": "linkedin"
+        },
+        {
+          "URL": "https://github.com/isanchezd1988",
+          "type": "github"
+        },
+        {
+          "URL": "https://twitter.com/isanchezd88",
+          "type": "twitter"
+        }
+      ],
+      "contactMails": ["sanchez.diaz.ivan@gmail.com"]
+    },
+    "preferences": {
+      "preferredCompetences": [
+        {
+          "name": "AWS",
+          "type": "technology"
+        },
+        {
+          "name": "Azure",
+          "type": "technology"
+        },
+        {
+          "name": "Azure Functions",
+          "type": "technology"
+        },
+        {
+          "name": "Google Cloud",
+          "type": "technology"
+        },
+        {
+          "name": "Jamstack",
+          "type": "technology"
+        },
+        {
+          "name": "LitElement",
+          "type": "technology"
+        },
+        {
+          "name": "MongoDB",
+          "type": "technology"
+        },
+        {
+          "name": "Nest",
+          "type": "technology"
+        },
+        {
+          "name": "Vue",
+          "type": "technology"
+        }
+      ],
+      "discardedCompetences": [
+        {
+          "name": "JSP",
+          "type": "technology"
+        },
+        {
+          "name": "PHP",
+          "type": "technology"
+        },
+        {
+          "name": "jQuery",
+          "type": "technology"
+        }
+      ],
+      "preferredRoles": [
+        "Backend Developer",
+        "Frontend Developer",
+        "Full-stack Developer",
+        "Scrum Master & Agile Coach"
+      ]
+    },
+    "status": "openToOffers"
+  },
+  "manfredSpecificData": {
+    "mainStackTechs": [
+      {
+        "name": "Angular2+",
+        "type": "technology"
+      },
+      {
+        "name": "JavaScript",
+        "type": "technology"
+      },
+      {
+        "name": "NodeJS",
+        "type": "technology"
+      },
+      {
+        "name": "React",
+        "type": "technology"
+      },
+      {
+        "name": "TypeScript",
+        "type": "technology"
+      }
+    ],
+    "desiredJobDescription": "Para mi el trabajo ideal es un trabajo que me permita conciliar vida personal y vida laboral, flexible y en remoto. \nMas haya de estar a la ultima en lo ultimo (al final hasta que no se asientan las tecnologías ir a lo ultimo de lo ultimo lo considero arriesgado)",
+    "goodPractices": "When implementing, I try to adhere to the principles of KISS, DRY, YAGNI, and SOLID as much as possible in a pragmatic way. I also aim to make the code as readable as possible, considering my colleagues who may need to work with it in the future.\n\nAdditionally, whenever possible, I strive to achieve a minimum test coverage (primarily integration testing in critical areas), regardless of whether the project mandates it or not, in an effort to provide coverage.\n",
+    "bookmarks": [
+      {
+        "name": "Clean Architecture: a craftsman's guide to software structure and design",
+        "imageUrl": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/11/03/a3c53050-6e47-4492-a8e1-4f1925235b6c_61r4tyvsrvl.jpg"
+      },
+      {
+        "name": "Codigo Sostenible",
+        "imageUrl": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/11/03/d1186028-2fdf-4297-83ed-0c546cd00830_71ggcrnk9fl.jpg"
+      },
+      {
+        "name": "Roadmap.sh"
+      }
+    ]
+  }
+}
