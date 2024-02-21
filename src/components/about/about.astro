@@ -1,0 +1,23 @@
+---
+import SectionContent from '../../layouts/section-content.astro';
+
+const { fullname, title, description, relevantLinks } = Astro.props;
+
+---
+
+<SectionContent id='about' title={fullname}>
+  <div class='subheading mb-5'>{title}</div>
+  <p class='lead mb-5'>
+    {description}
+  </p>
+  <div class='social-icons'>
+    <a class='social-icon' href='#!'><i class='bi bi-envelope-at-fill'></i></a>
+    {
+      relevantLinks.map((relevantLink) => (
+        <a class='social-icon' href={relevantLink.URL}>
+          <i class:list={['bi', `bi-${relevantLink.type}`]} />
+        </a>
+      ))
+    }
+  </div>
+</SectionContent>
