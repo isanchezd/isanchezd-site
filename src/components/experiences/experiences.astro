@@ -1,0 +1,10 @@
+---
+import SectionContent from '../../layouts/section-content.astro';
+import Experience from './experience/experience.astro';
+
+const { jobs } = Astro.props;
+---
+
+<SectionContent id='experience' title='Experience'>
+  { jobs.map((job) => <Experience job={job} />) }
+</SectionContent>
