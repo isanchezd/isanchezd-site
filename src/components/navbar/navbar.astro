@@ -1,4 +1,6 @@
 ---
+import Navlang from "../navlang/navlang.astro";
+
 const { avatarUrl, avatarAlt } = Astro.props
 ---
 
@@ -6,7 +8,7 @@ const { avatarUrl, avatarAlt } = Astro.props
   id='sideNav'
   class='navbar navbar-expand-lg navbar-dark bg-primary fixed-top'
 >
-  <a class='navbar-brand js-scroll-trigger' href='#page-top'>
+  <a class='navbar-brand flex-grow-1 flex-sm-grow-1 flex-md-grow-1 flex-lg-grow-0 flex-xl-grow-0 js-scroll-trigger' href='#page-top'>
     <span class='d-block d-lg-none'> Iván Sánchez Díaz</span>
     <span class='d-none d-lg-block'>
       <img
@@ -16,6 +18,7 @@ const { avatarUrl, avatarAlt } = Astro.props
       />
     </span>
   </a>
+  <Navlang classes={['d-flex d-sm-flex d-md-flex d-lg-none d-xl-none p-1']} />
   <button
     class='navbar-toggler'
     type='button'
