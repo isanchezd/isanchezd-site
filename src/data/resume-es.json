@@ -9,7 +9,7 @@
       "name": "Iván",
       "surnames": "Sánchez Díaz",
       "title": "Software Web Developer",
-      "description": "Working in web development for the past 10 years as a full-stack developer with JavaScript, I have pragmatically applied software development principles such as SOLID, YAGNI, KISS, DRY in teams led by agile methodologies (Scrum, Kanban), and hybrid methodologies (Agile-waterfall Hybrid) in sectors such as education, publishing, and finance. This has provided me with a comprehensive understanding of the analysis, design, development, and deployment of web applications in these sectors.\n\nAdditionally, I enjoy mentoring because when I first started in the field, I would have appreciated having someone by my side to guide me on how to do things right. Since then, I've adopted the motto 'Be the mentor you wish you had.'\n\nIn addition to my professional experience, I also enjoy tinkering with other tools outside of my daily work to experiment and learn how things are done with different tools and technologies.\n\n\n\n",
+      "description": "Trabajando en desarrollo web durante los últimos 10 años como desarrollador full-stack con JavaScript, he aplicado pragmáticamente principios de desarrollo de software como SOLID, YAGNI, KISS, DRY en equipos liderados por metodologías ágiles (Scrum, Kanban) y metodologías híbridas (Agile-waterfall Hybrid) en sectores como educación, editorial y finanzas. Esto me ha proporcionado una comprensión integral del análisis, diseño, desarrollo e implementación de aplicaciones web en estos sectores.\n\nAdemás, disfruto del mentorazgo porque cuando comencé en el campo, hubiera apreciado tener a alguien a mi lado para guiarme sobre cómo hacer las cosas correctamente. Desde entonces, he adoptado el lema 'Sé el mentor que desearías haber tenido'.\n\nAdemás de mi experiencia profesional, también disfruto el cacharreo con otras herramientas fuera de mi trabajo diario para experimentar y aprender cómo se hacen las cosas con diferentes herramientas y tecnologías.\n\n\n",
       "avatar": {
         "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/24/02/17/90b5074d-b817-4ce3-ac3e-197b27128e0e_profile.png",
         "alt": "profile.png"
@@ -45,11 +45,6 @@
             "title": "Author"
           }
         ]
-      },
-      {
-        "title": "Roadmap.sh",
-        "type": "other",
-        "URL": "https://roadmap.sh/"
       }
     ],
     "relevantLinks": [
@@ -84,7 +79,7 @@
             "startDate": "2022-06-01",
             "challenges": [
               {
-                "description": "Development of an application for the online gaming sector, consisting of a web application composed of a React-based Single Page Application (SPA) and an API using Strapi CMS, orchestrated on a Docker-based infrastructure. Analysis, definition, and execution of data migration from WordPress to Strapi CMS."
+                "description": "Trabajando como FullStack Team Lead, realizando tareas como análisis de requisitos, definición de tareas, desarrollo y mantenimiento de funcionalidades en aplicaciones web (SPAs) con React en el frontend, Strapi CMS en el backend, PostgreSQL como SGDB corriendo sobre infrastructura Docker  para el sector del juego online asi como supervisión técnica del equipo."
               }
             ],
             "competences": [
@@ -139,11 +134,12 @@
         },
         "roles": [
           {
-            "name": "Senior Frontend Developer & Frontend Team Leader",
+            "name": "Senior Frontend Developer",
             "startDate": "2019-06-01",
+            "finishDate": "2022-05-01",
             "challenges": [
               {
-                "description": "Technical lead for frontend projects, performing tasks such as analysis, development, evolution, and maintenance of web applications (SPAs) and web component libraries using Angular as the primary technology, as well as overseeing and managing team"
+                "description": "Realizando tareas como Frontend Team Lead de analisis de requisitos, definición de tareas, desarrollo, mantenimiento y testeo de funcionalidades en aplicaciones web (SPAs) y bibliotecas de web components utilizando Angular como tecnología principal en infrastructura openshift para el sector de los seguros así como labores de mentoring en los con compañeros con menos experiencia"
               }
             ],
             "competences": [
@@ -185,16 +181,17 @@
           "image": {
             "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/22/03/31/ff89d0a2-bdaf-4e4d-9780-887cc4aa1828_vector-itc-marca-col.png",
             "alt": "Vector-ITC-Marca-Color.png"
-          }
+          },
+          "URL": "https://www.soprasteria.es/"
         },
         "roles": [
           {
-            "name": "Middle Frontend Developer & Frontend Team Leader",
+            "name": "Mid Frontend Developer",
             "startDate": "2016-08-01",
             "finishDate": "2019-06-01",
             "challenges": [
               {
-                "description": "Technical lead for frontend projects, conducting tasks related to analysis, development, evolution, and maintenance of web applications (SPAs) using AngularJS and Angular as the primary technologies, alongside supervision and team management responsibilities in the financial sector."
+                "description": "Realizando tareas como Frontend Developer de definicion de tareas, desarrollo, mantenimiento y testeo de aplicaciones web (SPAs) usando Angular JS & Angular desplegadas en infrastructura openshift / AWS y desarrollos de flujos de CI & CD con jenkins para el sector bancario. Tambien realizando labores de Team Lead y mentoring en los equipos"
               }
             ],
             "competences": [
@@ -236,7 +233,8 @@
           "image": {
             "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/22/03/31/4e785909-ec9b-4e87-baa2-e847e9ddb5c7_inmediastudio_480.png",
             "alt": "inMediaStudio_480.png"
-          }
+          },
+          "URL": "https://www.soprasteria.es/"
         },
         "roles": [
           {
@@ -245,7 +243,7 @@
             "finishDate": "2016-08-01",
             "challenges": [
               {
-                "description": "Fullstack developer performing tasks related to development, evolution, and maintenance in web applications (MPA & SPA), hybrid applications, and APIs using LAMP, Codeigniter, AngularJS, NWJS, and Cordova as the main technologies"
+                "description": "Realizando tareas como Fullstack Developer de desarrollo y mantenimiento de funcionalidades en aplicacion web  (SPA) multiplataforma (Desktop, Mobile, Web) usando Angular.js asi como desarrollo de Api rest con Codeigniter y MySQL como SGBD para el sector educativo"
               }
             ],
             "competences": [
@@ -301,7 +299,7 @@
             "finishDate": "2015-05-01",
             "challenges": [
               {
-                "description": "Fullstack developer carrying out development, evolution, and maintenance tasks in web applications (MPA & SPA), hybrid applications, and APIs using LAMP, jQuery, and Cordova as the main technologies."
+                "description": "Trabajando como Fullstack developer haciendo tareas de desarrollo y mantenimiento de aplicaciones web (MPA & SPA) usando Jquery & Angular.js en el lado frontend y Php en el lado backend con Mysql como SGBD corriendo en Vps con GNU/Linux en los sectores educativos & editorial"
               }
             ],
             "competences": [
@@ -361,7 +359,7 @@
             "finishDate": "2012-06-01",
             "challenges": [
               {
-                "description": "Development of a native Android application for the geoposition-based control of transportation vehicles."
+                "description": "Trabajando en practicas como desarrollador de aplicacion movil para el sector de la logistica y el transporte"
               }
             ],
             "competences": [
@@ -686,7 +684,9 @@
           "type": "twitter"
         }
       ],
-      "contactMails": ["sanchez.diaz.ivan@gmail.com"]
+      "contactMails": [
+        "sanchez.diaz.ivan@gmail.com"
+      ]
     },
     "preferences": {
       "preferredCompetences": [
@@ -774,7 +774,7 @@
       }
     ],
     "desiredJobDescription": "Para mi el trabajo ideal es un trabajo que me permita conciliar vida personal y vida laboral, flexible y en remoto. \nMas haya de estar a la ultima en lo ultimo (al final hasta que no se asientan las tecnologías ir a lo ultimo de lo ultimo lo considero arriesgado)",
-    "goodPractices": "When implementing, I try to adhere to the principles of KISS, DRY, YAGNI, and SOLID as much as possible in a pragmatic way. I also aim to make the code as readable as possible, considering my colleagues who may need to work with it in the future.\n\nAdditionally, whenever possible, I strive to achieve a minimum test coverage (primarily integration testing in critical areas), regardless of whether the project mandates it or not, in an effort to provide coverage.\n",
+    "goodPractices": "Al implementar, intento adherirme a los principios de KISS, DRY, YAGNI y SOLID tanto como sea posible de manera pragmática. También tengo como objetivo hacer que el código sea lo más legible posible, considerando a mis colegas que puedan necesitar trabajar con él en el futuro.\n\nAdemás, siempre que sea posible, me esfuerzo por lograr una cobertura de prueba mínima (principalmente pruebas de integración en áreas críticas), independientemente de si el proyecto lo exige o no, en un esfuerzo por proporcionar cobertura.\n",
     "bookmarks": [
       {
         "name": "Clean Architecture: a craftsman's guide to software structure and design",
@@ -783,9 +783,6 @@
       {
         "name": "Codigo Sostenible",
         "imageUrl": "https://media-asgard.s3.eu-west-1.amazonaws.com/23/11/03/d1186028-2fdf-4297-83ed-0c546cd00830_71ggcrnk9fl.jpg"
-      },
-      {
-        "name": "Roadmap.sh"
       }
     ]
   }

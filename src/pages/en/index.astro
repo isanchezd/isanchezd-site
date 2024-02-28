@@ -1,14 +1,14 @@
 ---
-import MainLayout from '../layouts/main.astro'
-import SectionContent from '../layouts/section-content.astro'
-import Navlang from '../components/navlang/navlang.astro'
-import About from '../sections/about/about.astro'
-import Experiences from '../sections/experiences/experiences.astro'
-import Education from '../sections/education/education.astro'
-import StudyTypes from '../enums/study-types.js'
-import '../styles/styles.scss'
+import MainLayout from '../../layouts/main.astro'
+import SectionContent from '../../layouts/section-content.astro'
+import Navlang from '../../components/navlang/navlang.astro'
+import About from '../../sections/about/about.astro'
+import Experiences from '../../sections/experiences/experiences.astro'
+import Education from '../../sections/education/education.astro'
+import StudyTypes from '../../enums/study-types.js'
+import '../../styles/styles.scss'
 import 'bootstrap-icons/font/bootstrap-icons.min.css'
-import resume from '../data/resume-es.json'
+import resume from '../../data/resume-en.json'
 
 const { aboutMe, experience, knowledge } = resume
 
