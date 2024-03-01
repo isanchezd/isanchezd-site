@@ -1,5 +1,4 @@
 ---
-const { classes } = Astro.props;
 const currentPathName = Astro.url.pathname;
 
 const isPathActive = (currentPathName, pathname) =>
@@ -8,7 +7,7 @@ const getLinkClasses = (currentPathName, pathname) =>
   `lang__link ${isPathActive(currentPathName, pathname) ? 'lang__link--is-active' : ''}`;
 ---
 
-<div class:list={classes}>
+<div>
   <div>
     <a href='/' class:list={getLinkClasses(currentPathName, '/')}>ES</a>
     <span>|</span>
@@ -16,17 +15,3 @@ const getLinkClasses = (currentPathName, pathname) =>
   </div>
 </div>
 
-<style>
-  .lang__link {
-    color: var(--bs-gray-600);
-    text-decoration: none;
-  }
-
-  .lang__link:hover {
-    color: var(--bs-white);
-  }
-
-  .lang__link--is-active {
-    color: var(--bs-white);
-  }
-</style>

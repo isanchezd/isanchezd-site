@@ -1,0 +1,33 @@
+---
+---
+<div class='d-inline-flex'>
+  <span>Light</span>
+  <div class='form-check form-switch mx-1'>
+    <input
+      id='themeSelector'
+      class='form-check-input'
+      type='checkbox'
+      role='switch'
+      checked
+    />
+  </div>
+  <span>Dark</span>
+</div>
+
+<script>
+        const themeSelectors = document.querySelectorAll('input')
+        const body = document.querySelector('body')
+
+        const onClickThemeSelector = (event) => {
+            const element = event.target
+            const status = element.checked
+
+            if(status) {
+                body.setAttribute('data-bs-theme', 'dark')
+            } else {
+                body.setAttribute('data-bs-theme', 'light')
+            }
+        }
+
+        themeSelectors.forEach(node => node.addEventListener('click', onClickThemeSelector))
+</script>

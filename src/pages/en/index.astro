@@ -2,6 +2,7 @@
 import MainLayout from '../../layouts/main.astro'
 import SectionContent from '../../layouts/section-content.astro'
 import Navlang from '../../components/navlang/navlang.astro'
+import ThemeSelector from '../../components/theme-selector/theme-selector.astro';
 import About from '../../sections/about/about.astro'
 import Experiences from '../../sections/experiences/experiences.astro'
 import Education from '../../sections/education/education.astro'
@@ -24,7 +25,10 @@ const fullname = `${name} ${surnames}`
 ---
 
 <MainLayout title={fullname} avatar={avatar}>
-  <Navlang classes={['d-none d-sm-none d-md-none d-lg-flex d-xl-flex justify-content-end p-4']} />
+  <div class:list={['d-none d-sm-none d-md-none d-lg-flex d-xl-flex justify-content-end p-4 gap-3']}>
+    <ThemeSelector />
+    <Navlang />
+  </div>
   <About fullname={fullname} title={title} description={description} relevantLinks={relevantLinks} />
   <Experiences jobs={jobs}/>
   <Education studies={officialDegrees} id="education" title="Education"/>
