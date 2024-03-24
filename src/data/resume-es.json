@@ -79,12 +79,12 @@
             "startDate": "2022-06-01",
             "challenges": [
               {
-                "description": "Trabajando como FullStack Team Lead, realizando tareas como análisis de requisitos, definición de tareas, desarrollo y mantenimiento de funcionalidades en aplicaciones web (SPAs) con React en el frontend, Strapi CMS en el backend, PostgreSQL como SGDB corriendo sobre infrastructura Docker  para el sector del juego online asi como supervisión técnica del equipo."
+                "description": "Trabajando como FullStack Team Lead, realizando tareas como análisis de requisitos, definición de tareas, desarrollo y mantenimiento de funcionalidades en aplicaciones web (SPAs) con React en el frontend, Strapi Strapi en el backend, PostgreSQL como SGDB corriendo sobre infrastructura Docker  para el sector del juego online asi como supervisión técnica del equipo."
               }
             ],
             "competences": [
               {
-                "name": "CMS",
+                "name": "Strapi",
                 "type": "technology"
               },
               {
@@ -409,12 +409,6 @@
       },
       {
         "skill": {
-          "name": "CMS",
-          "type": "technology"
-        }
-      },
-      {
-        "skill": {
           "name": "CSS",
           "type": "technology"
         }
@@ -470,6 +464,12 @@
       {
         "skill": {
           "name": "Scss",
+          "type": "technology"
+        }
+      },
+      {
+        "skill": {
+          "name": "Strapi",
           "type": "technology"
         }
       },
