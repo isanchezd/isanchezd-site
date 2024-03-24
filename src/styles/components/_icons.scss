@@ -1,9 +1,18 @@
-// 
+//
 // Icons
-// 
-
+//
 
 // Styling for the development technology icons
 .dev-icons {
-    font-size: 3rem;
+  font-size: 3rem;
+}
+
+.dev-icon {
+  width: 6rem;
+}
+
+@media screen and (max-width: 575.98px) {
+  .dev-icon {
+    width: 3rem;
+  }
 }

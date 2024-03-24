@@ -1,157 +1,53 @@
 ---
-import MainLayout from '../../layouts/main.astro'
-import SectionContent from '../../layouts/section-content.astro'
-import Navlang from '../../components/navlang/navlang.astro'
+import MainLayout from '../../layouts/main.astro';
+import Navlang from '../../components/navlang/navlang.astro';
 import ThemeSelector from '../../components/theme-selector/theme-selector.astro';
-import About from '../../sections/about/about.astro'
-import Experiences from '../../sections/experiences/experiences.astro'
-import Education from '../../sections/education/education.astro'
-import StudyTypes from '../../enums/study-types.js'
-import '../../styles/styles.scss'
-import 'bootstrap-icons/font/bootstrap-icons.min.css'
-import resume from '../../data/resume-en.json'
+import About from '../../sections/about/about.astro';
+import Experiences from '../../sections/experiences/experiences.astro';
+import Education from '../../sections/education/education.astro';
+import Skills from '../../sections/skills/skills.astro';
+import StudyTypes from '../../enums/study-types.js';
+import '../../styles/styles.scss';
+import 'bootstrap-icons/font/bootstrap-icons.min.css';
+import resume from '../../data/resume-en.json';
 
-const { aboutMe, experience, knowledge } = resume
+const { aboutMe, experience, knowledge } = resume;
 
-const { name, surnames, title, description, avatar } = aboutMe.profile
-const { relevantLinks } = aboutMe
-const { jobs } = experience
-const { studies } = knowledge
-const officialDegrees = studies.filter(study => study.studyType === StudyTypes.degree)
-const certifications = studies.filter(study => study.studyType === StudyTypes.certification)
+const { name, surnames, title, description, avatar } = aboutMe.profile;
+const { relevantLinks } = aboutMe;
+const { jobs } = experience;
+const { studies, hardSkills } = knowledge;
+const officialDegrees = studies.filter(
+  (study) => study.studyType === StudyTypes.degree
+);
+const certifications = studies.filter(
+  (study) => study.studyType === StudyTypes.certification
+);
 
-
-const fullname = `${name} ${surnames}`
+const fullname = `${name} ${surnames}`;
 ---
 
 <MainLayout title={fullname} avatar={avatar}>
-  <div class:list={['d-none d-sm-none d-md-none d-lg-flex d-xl-flex justify-content-end p-4 gap-3']}>
+  <div
+    class:list={[
+      'd-none d-sm-none d-md-none d-lg-flex d-xl-flex justify-content-end p-4 gap-3',
+    ]}
+  >
     <ThemeSelector />
     <Navlang />
   </div>
-  <About fullname={fullname} title={title} description={description} relevantLinks={relevantLinks} />
-  <Experiences jobs={jobs}/>
-  <Education studies={officialDegrees} id="education" title="Education"/>
-  <Education studies={certifications} id="certifications" title="Certifications"/>
-  <SectionContent id='skills' title='Skills'>
-    <div class='subheading mb-3'>Programming Languages & Frameworks</div>
-    <ul class='list-inline dev-icons'>
-      <li class='list-inline-item'>
-        <img
-          src='https://img.shields.io/badge/-HTML5-E34F26?style=plastic&logo=html5&logoColor=white'
-          alt='HTML Lang'
-        />
-      </li>
-      <li class='list-inline-item'>
-        <img
-          src='https://img.shields.io/badge/-CSS3-1572B6?style=plastic&logo=css3&logoColor=white'
-          alt='CSS3 Lang'
-        />
-      </li>
-      <li class='list-inline-item'>
-        <img
-          src='https://img.shields.io/badge/-SASS-CC6699?style=plastic&logo=sass&logoColor=white'
-          alt='SASS Lang'
-        />
-      </li>
-      <li class='list-inline-item'>
-        <img
-          src='https://img.shields.io/badge/-JavaScript-F7DF1E?style=plastic&logo=JavaScript&logoColor=black'
-          alt='Javascript Lang'
-        />
-      </li>
-      <li class='list-inline-item'>
-        <img
-          src='https://img.shields.io/badge/-TypeScript-3178C6?style=plastic&logo=TypeScript&logoColor=white'
-          alt='Typescript Lang'
-        />
-      </li>
-      <li class='list-inline-item'>
-        <img
-          src='https://img.shields.io/badge/-Angular-DD0031?style=plastic&logo=angular'
-          alt='Angular'
-        />
-      </li>
-      <li class='list-inline-item'>
-        <img
-          src='https://img.shields.io/badge/-React-3178C6?style=plastic&logo=React'
-          alt='React'
-        />
-      </li>
-      <li class='list-inline-item'>
-        <img
-          src='https://img.shields.io/badge/-Next.js-000000?style=plastic&logo=Next.js&logoColor=white'
-          alt='Next.js'
-        />
-      </li>
-      <li class='list-inline-item'>
-        <img
-          src='https://img.shields.io/badge/-Bootstrap-6610f2?style=plastic&logo=bootstrap&logoColor=white'
-          alt='Bootstrap'
-        />
-      </li>
-      <li class='list-inline-item'>
-        <img
-          src='https://img.shields.io/badge/-Tailwind-38bdf8?style=plastic&logo=tailwindcss&logoColor=white'
-          alt='TailwindCss'
-        />
-      </li>
-    </ul>
-    <div class='subheading mb-3'>Databases</div>
-    <ul class='list-inline dev-icons'>
-      <li class='list-inline-item'>
-        <img
-          src='https://img.shields.io/badge/-MongoDB-47A248?style=plastic&logo=MongoDB&logoColor=white'
-          alt='MongoDB'
-        />
-      </li>
-      <li class='list-inline-item'>
-        <img
-          src='https://img.shields.io/badge/-MySql-EDEDED?style=plastic&logo=Mysql&logoColor=blue'
-          alt='MySQL'
-        />
-      </li>
-      <li class='list-inline-item'>
-        <img
-          src='https://img.shields.io/badge/-PostgreSql-EDEDED?style=plastic&logo=Postgresql&logoColor=blue'
-          alt='PostgreSQL'
-        />
-      </li>
-    </ul>
-    <div class='subheading mb-3'>Tools</div>
-    <ul class='list-inline dev-icons'>
-      <li class='list-inline-item'>
-        <img
-          src='https://img.shields.io/badge/-Strapi-4945ff?style=plastic&logo=Strapi&logoColor=white'
-          alt='Strapi'
-        />
-      </li>
-      <li class='list-inline-item'>
-        <img
-          src='https://img.shields.io/badge/-Jest-FFFFFF?style=plastic&logo=jest&logoColor=red'
-          alt='Jest'
-        />
-      </li>
-      <li class='list-inline-item'>
-        <img
-          src='https://img.shields.io/badge/-Cypress-339933?style=plastic&logo=cypress&logoColor=white'
-          alt='Cypress'
-        />
-      </li>
-      <li class='list-inline-item'>
-        <img
-          src='https://img.shields.io/badge/-Git-F05032?style=plastic&logo=git&logoColor=white'
-          alt='Git'
-        />
-      </li>
-      <li class='list-inline-item'>
-        <img
-          src='https://img.shields.io/badge/-Svn-93B0DA?style=plastic&logo=subversion&logoColor=white'
-          alt='SVN'
-        />
-      </li>
-    </ul>
-  </SectionContent>
-
-  
+  <About
+    fullname={fullname}
+    title={title}
+    description={description}
+    relevantLinks={relevantLinks}
+  />
+  <Experiences jobs={jobs} />
+  <Education studies={officialDegrees} id='education' title='Education' />
+  <Education
+    studies={certifications}
+    id='certifications'
+    title='Certifications'
+  />
+  <Skills skills={hardSkills} id='skills' title='Skills' />
 </MainLayout>

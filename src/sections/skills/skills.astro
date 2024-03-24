@@ -1,0 +1,19 @@
+---
+import SectionContent from '../../layouts/section-content.astro';
+import Icon from '../../components/icon/icon.astro';
+
+const { id, title, skills } = Astro.props;
+---
+
+<SectionContent id={id} title={title}>
+  <ul class='list-inline dev-icons'>
+    {
+      skills.map((skill) => {
+        <p>{skill}</p>
+        return <li class='list-inline-item'>
+          <Icon name={skill.skill.name} alt={`${skill.skill.name} icon`} />
+        </li>
+      })
+    }
+  </ul>
+</SectionContent>
