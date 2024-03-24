@@ -3,8 +3,13 @@ import SectionContent from '../../layouts/section-content.astro';
 import Experience from './experience/experience.astro';
 
 const { jobs } = Astro.props;
+
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
-<SectionContent id='experience' title='Experience'>
-  { jobs.map((job) => <Experience job={job} />) }
+<SectionContent id='experience' title={t('nav.experience')}>
+  {jobs.map((job) => <Experience job={job} />)}
 </SectionContent>

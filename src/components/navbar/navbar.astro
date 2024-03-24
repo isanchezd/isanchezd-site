@@ -1,15 +1,19 @@
 ---
-import Navlang from '../navlang/navlang.astro'
-import ThemeSelector from '../theme-selector/theme-selector.astro'
+import Navlang from '../navlang/navlang.astro';
+import ThemeSelector from '../theme-selector/theme-selector.astro';
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
 
-const { avatarUrl, avatarAlt } = Astro.props
+const { avatarUrl, avatarAlt } = Astro.props;
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
-<nav
-  id='sideNav'
-  class='navbar navbar-expand-lg fixed-top'
->
-  <a class='navbar-brand flex-grow-1 flex-sm-grow-1 flex-md-grow-1 flex-lg-grow-0 flex-xl-grow-0 js-scroll-trigger' href='#page-top'>
+<nav id='sideNav' class='navbar navbar-expand-lg fixed-top'>
+  <a
+    class='navbar-brand flex-grow-1 flex-sm-grow-1 flex-md-grow-1 flex-lg-grow-0 flex-xl-grow-0 js-scroll-trigger'
+    href='#page-top'
+  >
     <span class='d-block d-lg-none'> Iván Sánchez Díaz</span>
     <span class='d-none d-lg-block'>
       <img
@@ -19,9 +23,11 @@ const { avatarUrl, avatarAlt } = Astro.props
       />
     </span>
   </a>
-  <div class:list={['d-flex d-sm-flex d-md-flex d-lg-none d-xl-none p-1 gap-3']}>
-      <ThemeSelector  />
-      <Navlang />
+  <div
+    class:list={['d-flex d-sm-flex d-md-flex d-lg-none d-xl-none p-1 gap-3']}
+  >
+    <ThemeSelector />
+    <Navlang />
   </div>
   <button
     class='navbar-toggler'
@@ -40,52 +46,61 @@ const { avatarUrl, avatarAlt } = Astro.props
   <div id='navbarResponsive' class='navbar-collapse collapse'>
     <ul class='navbar-nav'>
       <li class='nav-item'>
-        <a class='nav-link js-scroll-trigger' href='#about'> About</a>
-        <a class='nav-link js-scroll-trigger' href='#experience'> Experience</a>
-        <a class='nav-link js-scroll-trigger' href='#education'> Education</a>
-        <a class='nav-link js-scroll-trigger' href='#certifications'> Certifications</a>
-        <a class='nav-link js-scroll-trigger' href='#skills'> Skills</a>
+        <a class='nav-link js-scroll-trigger' href='#about'>
+          {t('nav.about')}
+        </a>
+        <a class='nav-link js-scroll-trigger' href='#experience'>
+          {t('nav.experience')}
+        </a>
+        <a class='nav-link js-scroll-trigger' href='#education'>
+          {t('nav.education')}
+        </a>
+        <a class='nav-link js-scroll-trigger' href='#certifications'>
+          {t('nav.certifications')}
+        </a>
+        <a class='nav-link js-scroll-trigger' href='#skills'>
+          {t('nav.skills')}
+        </a>
       </li>
     </ul>
   </div>
 </nav>
 
-
 <script>
-    import boostrap from 'bootstrap/js/index.umd';
+  import boostrap from 'bootstrap/js/index.umd';
 
-    window.addEventListener('DOMContentLoaded', onDocumentLoaded);
+  window.addEventListener('DOMContentLoaded', onDocumentLoaded);
 
-    function onDocumentLoaded() {
-      // Activate Bootstrap scrollspy on the main nav element
-      const sideNav = document.body.querySelector('#sideNav');
-      if (sideNav) {
-        new boostrap.ScrollSpy(document.body, {
-          target: '#sideNav',
-          rootMargin: '0px 0px -40%',
-        });
-      }
-
-      // Collapse responsive navbar when toggler is visible
-      const navbarToggler = document.body.querySelector('.navbar-toggler');
-
-      const responsiveNavItems = [].slice.call(
-        document.querySelectorAll('#navbarResponsive .nav-link')
-      );
-
-      responsiveNavItems.map(function (responsiveNavItem) {
-        responsiveNavItem.addEventListener('click', () =>
-          onClickInNavbarItems(navbarToggler)
-        );
+  function onDocumentLoaded() {
+    // Activate Bootstrap scrollspy on the main nav element
+    const sideNav = document.body.querySelector('#sideNav');
+    if (sideNav) {
+      new boostrap.ScrollSpy(document.body, {
+        target: '#sideNav',
+        rootMargin: '0px 0px -40%',
       });
     }
 
-    function onClickInNavbarItems(navbarToggler) {
-      const isNavbarTogglerVisible =
-        window.getComputedStyle(navbarToggler).display !== 'none';
+    // Collapse responsive navbar when toggler is visible
+    const navbarToggler = document.body.querySelector('.navbar-toggler');
 
-      if (isNavbarTogglerVisible) {
-        navbarToggler.click();
-      }
+    const responsiveNavItems = [].slice.call(
+      document.querySelectorAll('#navbarResponsive .nav-link')
+    );
+
+    responsiveNavItems.map(function (responsiveNavItem) {
+      responsiveNavItem.addEventListener('click', () =>
+        onClickInNavbarItems(navbarToggler)
+      );
+    });
+  }
+
+  function onClickInNavbarItems(navbarToggler) {
+    const isNavbarTogglerVisible =
+      window.getComputedStyle(navbarToggler).display !== 'none';
+
+    if (isNavbarTogglerVisible) {
+      navbarToggler.click();
     }
-  </script>
+  }
+</script>
