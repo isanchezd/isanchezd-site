@@ -1,0 +1,10 @@
+---
+const {id, title} = Astro.props
+---
+
+<section class="resume-section" id={id}>
+    <div class="resume-section-content">
+        <h2 class="mb-5">{title}</h2>
+        <slot />
+    </div>
+</section>

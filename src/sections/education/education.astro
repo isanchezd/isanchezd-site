@@ -1,0 +1,10 @@
+---
+import SectionContent from '../../layouts/section-content.astro';
+import Study from './study/study.astro';
+
+const { studies, title, id } = Astro.props;
+---
+
+<SectionContent id={id} title={title}>
+  {studies.map((study) => <Study study={study} />)}
+</SectionContent>

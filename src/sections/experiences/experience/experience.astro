@@ -1,0 +1,16 @@
+---
+    const { job } = Astro.props
+    const {organization, roles} = job
+    const firstRole = roles[0]
+---
+
+<div class='d-flex flex-column flex-md-row justify-content-between mb-5'>
+  <div class='flex-grow-1'>
+    <h3 class='mb-0'>{firstRole.name}</h3>
+    <div class='subheading mb-3'>{organization.name}</div>
+    <p>{firstRole.challenges[0]?.description}</p>
+  </div>
+  <div class='flex-shrink-0'>
+    <span class="text">{firstRole.startDate} {firstRole.finishDate}</span>
+  </div>
+</div>

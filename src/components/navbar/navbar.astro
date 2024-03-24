@@ -1,0 +1,91 @@
+---
+import Navlang from '../navlang/navlang.astro'
+import ThemeSelector from '../theme-selector/theme-selector.astro'
+
+const { avatarUrl, avatarAlt } = Astro.props
+---
+
+<nav
+  id='sideNav'
+  class='navbar navbar-expand-lg fixed-top'
+>
+  <a class='navbar-brand flex-grow-1 flex-sm-grow-1 flex-md-grow-1 flex-lg-grow-0 flex-xl-grow-0 js-scroll-trigger' href='#page-top'>
+    <span class='d-block d-lg-none'> Iván Sánchez Díaz</span>
+    <span class='d-none d-lg-block'>
+      <img
+        class='img-fluid img-profile rounded-circle mx-auto mb-2'
+        src={avatarUrl}
+        alt={avatarAlt}
+      />
+    </span>
+  </a>
+  <div class:list={['d-flex d-sm-flex d-md-flex d-lg-none d-xl-none p-1 gap-3']}>
+      <ThemeSelector  />
+      <Navlang />
+  </div>
+  <button
+    class='navbar-toggler'
+    type='button'
+    data-bs-toggle='collapse'
+    data-bs-target='#navbarResponsive'
+    ,
+    aria-controls='navbarResponsive'
+    ,
+    aria-expanded='false'
+    ,
+    aria-label='Toggle navigation'
+  >
+    <span class='navbar-toggler-icon'></span>
+  </button>
+  <div id='navbarResponsive' class='navbar-collapse collapse'>
+    <ul class='navbar-nav'>
+      <li class='nav-item'>
+        <a class='nav-link js-scroll-trigger' href='#about'> About</a>
+        <a class='nav-link js-scroll-trigger' href='#experience'> Experience</a>
+        <a class='nav-link js-scroll-trigger' href='#education'> Education</a>
+        <a class='nav-link js-scroll-trigger' href='#certifications'> Certifications</a>
+        <a class='nav-link js-scroll-trigger' href='#skills'> Skills</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+<script>
+    import boostrap from 'bootstrap/js/index.umd';
+
+    window.addEventListener('DOMContentLoaded', onDocumentLoaded);
+
+    function onDocumentLoaded() {
+      // Activate Bootstrap scrollspy on the main nav element
+      const sideNav = document.body.querySelector('#sideNav');
+      if (sideNav) {
+        new boostrap.ScrollSpy(document.body, {
+          target: '#sideNav',
+          rootMargin: '0px 0px -40%',
+        });
+      }
+
+      // Collapse responsive navbar when toggler is visible
+      const navbarToggler = document.body.querySelector('.navbar-toggler');
+
+      const responsiveNavItems = [].slice.call(
+        document.querySelectorAll('#navbarResponsive .nav-link')
+      );
+
+      responsiveNavItems.map(function (responsiveNavItem) {
+        responsiveNavItem.addEventListener('click', () =>
+          onClickInNavbarItems(navbarToggler)
+        );
+      });
+    }
+
+    function onClickInNavbarItems(navbarToggler) {
+      const isNavbarTogglerVisible =
+        window.getComputedStyle(navbarToggler).display !== 'none';
+
+      if (isNavbarTogglerVisible) {
+        navbarToggler.click();
+      }
+    }
+  </script>
