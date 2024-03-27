@@ -1,7 +1,7 @@
 ---
-    const { job } = Astro.props
-    const {organization, roles} = job
-    const firstRole = roles[0]
+const { job } = Astro.props;
+const { organization, roles } = job;
+const firstRole = roles[0];
 ---
 
 <div class='d-flex flex-column flex-md-row justify-content-between mb-5'>
@@ -11,6 +11,9 @@
     <p>{firstRole.challenges[0]?.description}</p>
   </div>
   <div class='flex-shrink-0'>
-    <span class="text">{firstRole.startDate} {firstRole.finishDate}</span>
+    <span class='text'
+      >{firstRole.startDate}
+      {firstRole.finishDate ? ` / ${firstRole.finishDate}` : null}</span
+    >
   </div>
 </div>
