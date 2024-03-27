@@ -1,8 +1,11 @@
 ---
 import SectionContent from '../../layouts/section-content.astro';
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
 
 const { fullname, title, description, relevantLinks } = Astro.props;
 
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <SectionContent id='about' title={fullname}>
@@ -11,10 +14,16 @@ const { fullname, title, description, relevantLinks } = Astro.props;
     {description}
   </p>
   <div class='social-icons'>
-    <a class='social-icon' href='#!'><i class='bi bi-envelope-at-fill'></i></a>
+    <a class='social-icon' href='#!' aria-label={`${'nav.email.aria'}`}
+      ><i class='bi bi-envelope-at-fill'></i></a
+    >
     {
       relevantLinks.map((relevantLink) => (
-        <a class='social-icon' href={relevantLink.URL}>
+        <a
+          class='social-icon'
+          href={relevantLink.URL}
+          aria-label={`${'nav.social.aria'} ${relevantLink.type}`}
+        >
           <i class:list={['bi', `bi-${relevantLink.type}`]} />
         </a>
       ))
@@ -23,27 +32,24 @@ const { fullname, title, description, relevantLinks } = Astro.props;
 </SectionContent>
 
 <style>
+  .social-icons .social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 3.5rem;
+    width: 3.5rem;
+    background-color: var(--bs-gray-700);
+    color: var(--bs-light);
+    border-radius: 100%;
+    font-size: 1.5rem;
+    margin-right: 1.5rem;
+  }
 
-.social-icons .social-icon {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        height: 3.5rem;
-        width: 3.5rem;
-        background-color: var(--bs-gray-700);
-        color: var(--bs-light);
-        border-radius: 100%;
-        font-size: 1.5rem;
-        margin-right: 1.5rem;
-}
+  .social-icons .social-icon:last-child {
+    margin-right: 0;
+  }
 
-.social-icons .social-icon:last-child {
-  margin-right: 0;
-}
-
-.social-icons .social-icon:hover {
-      background-color: var(--bs-gray-800);
-}
-
-
+  .social-icons .social-icon:hover {
+    background-color: var(--bs-gray-800);
+  }
 </style>
