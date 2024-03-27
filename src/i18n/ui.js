@@ -12,6 +12,9 @@ export const ui = {
     'nav.education': 'Educacion',
     'nav.certifications': 'Certificaciones',
     'nav.skills': 'Habilidades',
+    'nav.email.aria': 'Enviame un correo',
+    'nav.social.aria': 'Contacta conmigo en',
+    'nav.themeSelector.aria': 'Selector de tema grafico'
   },
   en: {
     'nav.about': 'About',
@@ -19,5 +22,8 @@ export const ui = {
     'nav.education': 'Education',
     'nav.certifications': 'Certifications',
     'nav.skills': 'Skills',
+    'nav.email.aria': 'Send mi an email',
+    'nav.social.aria': 'Contact with me in',
+    'nav.themeSelector.aria': 'Theme selector'
   },
 };
