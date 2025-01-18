@@ -1,0 +1,50 @@
+---
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+import SectionContent from '../../layouts/section-content.astro';
+import Technology from './technology.astro';
+
+const { id, title, technologies } = Astro.props;
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<SectionContent id={id} title={title}>
+  <div class='d-flex flex-column row-gap-5'>
+    <Technology
+      title={t('nav.technologies.languages')}
+      technologies={technologies.filter(
+        (tecnology) => tecnology.skill.type === 'language',
+      )}
+    />
+    <Technology
+      title={t('nav.technologies.frameworks')}
+      technologies={technologies.filter(
+        (tecnology) => tecnology.skill.type === 'framework',
+      )}
+    />
+    <Technology
+      title={t('nav.technologies.databases')}
+      technologies={technologies.filter(
+        (tecnology) => tecnology.skill.type === 'database',
+      )}
+    />
+    <Technology
+      title={t('nav.technologies.tools')}
+      technologies={technologies.filter(
+        (tecnology) => tecnology.skill.type === 'tool',
+      )}
+    />
+  </div>
+</SectionContent>
+
+<script>
+  import Tooltip from 'bootstrap/js/dist/tooltip';
+  const tooltipTriggerList = document.querySelectorAll(
+    '[data-bs-toggle="tooltip"]',
+  );
+  /* eslint-disable-next-line  no-unused-vars*/ // only required if using es-lint
+  const tooltipList = [...tooltipTriggerList].map(
+    (tooltipTriggerEl) => new Tooltip(tooltipTriggerEl),
+  );
+</script>

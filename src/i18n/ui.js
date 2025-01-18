@@ -7,23 +7,31 @@ export const defaultLang = 'es';
 
 export const ui = {
   es: {
-    'nav.about': 'Acerca de',
-    'nav.experience': 'Experiencia',
-    'nav.education': 'Educacion',
-    'nav.certifications': 'Certificaciones',
-    'nav.skills': 'Habilidades',
-    'nav.email.aria': 'Enviame un correo',
-    'nav.social.aria': 'Contacta conmigo en',
-    'nav.themeSelector.aria': 'Selector de tema grafico'
+    'nav.about': 'Sobre mí',
+    'nav.experience': 'Mi trayectoria',
+    'nav.education': 'Aprendizaje',
+    'nav.certifications': 'Certificados',
+    'nav.technologies': 'Tecnologias & Herramientas',
+    'nav.technologies.languages': 'Lenguajes',
+    'nav.technologies.frameworks': 'Frameworks',
+    'nav.technologies.databases': 'Bases de datos',
+    'nav.technologies.tools': 'Herramientas',
+    'nav.email.aria': '¡Escríbeme un correo!',
+    'nav.social.aria': 'Conéctate conmigo en',
+    'nav.themeSelector.aria': 'Cambia el estilo visual'
   },
   en: {
-    'nav.about': 'About',
-    'nav.experience': 'Experience',
-    'nav.education': 'Education',
+    'nav.about': 'Who I Am',
+    'nav.experience': 'My Journey',
+    'nav.education': 'Learning Path',
     'nav.certifications': 'Certifications',
-    'nav.skills': 'Skills',
-    'nav.email.aria': 'Send mi an email',
-    'nav.social.aria': 'Contact with me in',
-    'nav.themeSelector.aria': 'Theme selector'
-  },
+    'nav.technologies': 'Technologies & Tools',
+    'nav.technologies.languages': 'Languages',
+    'nav.technologies.frameworks': 'Frameworks',
+    'nav.technologies.databases': 'Databases',
+    'nav.technologies.tools': 'Tools',
+    'nav.email.aria': 'Drop me a message!',
+    'nav.social.aria': 'Let’s connect on',
+    'nav.themeSelector.aria': 'Switch Theme'
+  }
 };

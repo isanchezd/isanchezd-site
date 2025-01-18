@@ -52,14 +52,14 @@ const t = useTranslations(lang);
         <a class='nav-link js-scroll-trigger' href='#experience'>
           {t('nav.experience')}
         </a>
+        <a class='nav-link js-scroll-trigger' href='#technologies'>
+          {t('nav.technologies')}
+        </a>
         <a class='nav-link js-scroll-trigger' href='#education'>
           {t('nav.education')}
         </a>
         <a class='nav-link js-scroll-trigger' href='#certifications'>
           {t('nav.certifications')}
-        </a>
-        <a class='nav-link js-scroll-trigger' href='#skills'>
-          {t('nav.skills')}
         </a>
       </li>
     </ul>
@@ -85,12 +85,12 @@ const t = useTranslations(lang);
     const navbarToggler = document.body.querySelector('.navbar-toggler');
 
     const responsiveNavItems = [].slice.call(
-      document.querySelectorAll('#navbarResponsive .nav-link')
+      document.querySelectorAll('#navbarResponsive .nav-link'),
     );
 
     responsiveNavItems.map(function (responsiveNavItem) {
       responsiveNavItem.addEventListener('click', () =>
-        onClickInNavbarItems(navbarToggler)
+        onClickInNavbarItems(navbarToggler),
       );
     });
   }
