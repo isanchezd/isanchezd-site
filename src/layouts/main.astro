@@ -12,7 +12,7 @@ const { title, avatar } = Astro.props;
     <meta name='generator' content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body id='page-top' data-bs-theme="dark">
+  <body id='page-top' data-bs-theme='dark'>
     <Navbar avatarUrl={avatar.link} avatarAlt={avatar.alt} />
     <div class='container-fluid p-0' class='bg-primary'>
       <slot />

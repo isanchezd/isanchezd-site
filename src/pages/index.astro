@@ -5,12 +5,12 @@ import ThemeSelector from '../components/theme-selector/theme-selector.astro';
 import About from '../sections/about/about.astro';
 import Experiences from '../sections/experiences/experiences.astro';
 import Education from '../sections/education/education.astro';
-import Skills from '../sections/skills/skills.astro';
 import StudyTypes from '../enums/study-types.js';
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import Technologies from '../sections/technologies/technologies.astro';
+import resume from '../data/resume-es.json';
 import '../styles/styles.scss';
 import 'bootstrap-icons/font/bootstrap-icons.min.css';
-import resume from '../data/resume-es.json';
-import { getLangFromUrl, useTranslations } from '../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -23,10 +23,10 @@ const { jobs } = experience;
 const { studies, hardSkills } = knowledge;
 
 const officialDegrees = studies.filter(
-  (study) => study.studyType === StudyTypes.degree
+  (study) => study.studyType === StudyTypes.degree,
 );
 const certifications = studies.filter(
-  (study) => study.studyType === StudyTypes.certification
+  (study) => study.studyType === StudyTypes.certification,
 );
 
 const fullname = `${name} ${surnames}`;
@@ -48,6 +48,11 @@ const fullname = `${name} ${surnames}`;
     relevantLinks={relevantLinks}
   />
   <Experiences jobs={jobs} />
+  <Technologies
+    technologies={hardSkills}
+    id='technologies'
+    title={t('nav.technologies')}
+  />
   <Education
     studies={officialDegrees}
     id='education'
@@ -58,5 +63,4 @@ const fullname = `${name} ${surnames}`;
     id='certifications'
     title={t('nav.certifications')}
   />
-  <Skills skills={hardSkills} id='skills' title={t('nav.skills')} />
 </MainLayout>

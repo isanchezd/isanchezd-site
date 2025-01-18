@@ -1,0 +1,29 @@
+---
+import Icon from '../../components/icon/icon.astro';
+
+const { title, technologies } = Astro.props;
+---
+
+<div>
+    <h3 class='mb-5'>{title}</h3>
+    <ul class='list-inline d-inline-flex justify-content-between dev-icons'>
+        {
+            technologies.map((technology) => {
+                return (
+                    <li class='list-inline-item'>
+                        <span
+                            data-bs-toggle='tooltip'
+                            data-bs-title={technology.skill.name}
+                            data-bs-placement='bottom'
+                        >
+                            <Icon
+                                name={technology.skill.name}
+                                alt={`${technology.skill.name} icon`}
+                            />
+                        </span>
+                    </li>
+                );
+            })
+        }
+    </ul>
+</div>

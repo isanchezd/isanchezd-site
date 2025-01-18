@@ -8,8 +8,18 @@
 }
 
 .dev-icon {
-  width: 6rem;
+  width: 4rem;
 }
+
+.dev-icon:hover {
+  background-color: var(--bs-gray-800);
+}
+
+[data-bs-theme="light"] .dev-icon:hover {
+  background-color: var(--bs-gray-200);
+}
+
+
 
 @media screen and (max-width: 575.98px) {
   .dev-icon {
