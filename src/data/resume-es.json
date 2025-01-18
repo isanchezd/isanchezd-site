@@ -1,5 +1,4 @@
 {
-  "$schema": "https://raw.githubusercontent.com/getmanfred/mac/v0.5/schema/schema.json",
   "settings": {
     "language": "ES",
     "MACVersion": "0.5"
@@ -398,91 +397,116 @@
       {
         "skill": {
           "name": "Angular2+",
-          "type": "technology"
+          "type": "framework"
         }
       },
       {
         "skill": {
           "name": "Bootstrap",
-          "type": "technology"
+          "type": "framework"
         }
       },
       {
         "skill": {
           "name": "CSS",
-          "type": "technology"
+          "type": "language"
+          
         }
       },
       {
         "skill": {
           "name": "Docker",
-          "type": "technology"
+          "type": "tool"
         }
       },
       {
         "skill": {
           "name": "Express",
-          "type": "technology"
+          "type": "framework"
         }
       },
       {
         "skill": {
           "name": "HTML",
-          "type": "technology"
+          "type": "language"
         }
       },
       {
         "skill": {
           "name": "JavaScript",
-          "type": "technology"
+          "type": "language"
         }
       },
       {
         "skill": {
           "name": "MongoDB",
-          "type": "technology"
+          "type": "database"
         }
       },
       {
         "skill": {
           "name": "NodeJS",
-          "type": "technology"
+          "type": "language"
         }
       },
       {
         "skill": {
           "name": "PostgreSQL",
-          "type": "technology"
+          "type": "database"
         }
       },
       {
         "skill": {
           "name": "React",
-          "type": "technology"
+          "type": "framework"
         }
       },
       {
         "skill": {
           "name": "Scss",
-          "type": "technology"
+          "type": "language"
         }
       },
       {
         "skill": {
           "name": "Strapi",
-          "type": "technology"
+          "type": "framework"
         }
       },
       {
         "skill": {
           "name": "Tailwind",
-          "type": "technology"
+          "type": "framework"
         }
       },
       {
         "skill": {
           "name": "TypeScript",
-          "type": "technology"
+          "type": "language"
+        }
+      },
+      {
+        "skill": {
+          "name": "Git",
+          "type": "tool"
+        }
+      },
+      {
+        "skill": {
+          "name": "Svn",
+          "type": "tool"
+        }
+      },
+      {
+        "skill": {
+          "name": "Cypress",
+          "type": "tool"
+        }
+      },
+      {
+        "skill": {
+          "name": "Jest",
+          "type": "tool"
         }
       }
     ],
