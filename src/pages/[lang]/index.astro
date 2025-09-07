@@ -16,7 +16,7 @@ export function getStaticPaths() {
 }
 
 const lang = getLangFromUrl(Astro.url);
-const data = getPageData('es');
+const data = getPageData(lang);
 const {
   fullname,
   title,
