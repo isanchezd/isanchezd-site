@@ -1,6 +1,5 @@
 import resumeEs from '@/data/resume-es.json';
 import resumeEn from '@/data/resume-en.json';
-import { useTranslations } from '@/i18n/utils';
 
 export function getPageData(langParam) {
   const lang = langParam === 'en' ? 'en' : 'es';
