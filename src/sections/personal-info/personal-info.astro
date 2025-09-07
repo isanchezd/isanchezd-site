@@ -1,0 +1,24 @@
+---
+import Avatar from '@/components/ui/avatar.astro';
+import { ExternalLink} from '@lucide/astro';
+
+const { fullname, title, municipality, country, emailUrl } = Astro.props;
+---
+
+<div class='text-center mb-16'>
+  <Avatar class='w-24 h-24 mx-auto mb-6' src='profile.png' alt='Iván' />
+  <h1 class='text-2xl font-medium text-gray-900 dark:text-white mb-2'>
+    {fullname}
+  </h1>
+  <p class='text-gray-600 dark:text-gray-400 mb-1'>{title}</p>
+  <p class='text-gray-500 dark:text-gray-500 text-sm'>
+    {municipality}, {country}
+  </p>
+  <a
+    href={`mailto:${emailUrl}`}
+    class='text-blue-600 dark:text-blue-400 text-sm hover:underline inline-flex items-center gap-1 mt-2'
+  >
+    {emailUrl}
+    <ExternalLink class='h-3 w-3' />
+  </a>
+</div>

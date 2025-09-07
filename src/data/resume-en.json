@@ -8,15 +8,15 @@
       "name": "Iván",
       "surnames": "Sánchez Díaz",
       "title": "Software Web Developer",
-      "description": "Working in web development for the last 10 years as a full-stack developer with JavaScript, I have pragmatically applied software development principles like SOLID, YAGNI, KISS, DRY in teams led by agile methodologies (Scrum, Kanban) and hybrid methodologies (Agile-waterfall Hybrid) in sectors such as education, publishing, and finance. This has provided me with a comprehensive understanding of analysis, design, development, and implementation of web applications in these sectors.\n\nMoreover, I enjoy mentoring because when I started in the field, I would have appreciated having someone by my side to guide me on how to do things correctly. Since then, I have adopted the motto 'Be the mentor you wish you had.'\n\nIn addition to my professional experience, I also enjoy tinkering with other tools outside of my daily work to experiment and learn how things are done with different tools and technologies.\n\n\n",
+      "description": "Full-stack developer with 10 years of experience in sectors such as education, publishing, finance, and retail. I’m motivated by doing things right, with a focus on continuous improvement, and I enjoy helping others grow with the motto “Be the mentor you wish you had.” I’m always exploring new tools and technologies to keep learning in my day-to-day work",
       "avatar": {
         "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/24/02/17/90b5074d-b817-4ce3-ac3e-197b27128e0e_profile.png",
         "alt": "profile.png"
       },
       "location": {
         "notes": "Autocompleted using Google Maps API (id: ChIJgTwKgJcpQg0RaSKMYcHeNsQ)",
-        "country": "España",
-        "region": "Comunidad de Madrid",
+        "country": "Spain",
+        "region": "Madrid",
         "municipality": "Madrid"
       }
     },
@@ -32,6 +32,10 @@
       {
         "type": "twitter",
         "URL": "https://twitter.com/isanchezd88"
+      },
+      {
+        "type": "email",
+        "URL": "sanchez.diaz.ivan@gmail.com"
       }
     ]
   },

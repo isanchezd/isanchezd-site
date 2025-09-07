@@ -1,0 +1,13 @@
+---
+const { class: className = '', ...rest } = Astro.props;
+
+const classes = ['rounded-lg border bg-card text-card-foreground shadow-sm', className]
+  .filter(Boolean)
+  .join(' ');
+---
+
+<div class={classes} {...rest}>
+  <slot name="header" />
+  <slot />
+  <slot name="footer" />
+</div>

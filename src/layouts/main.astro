@@ -1,21 +1,40 @@
 ---
-import Navbar from '../components/navbar/navbar.astro';
+import '../styles/global.css';
 
-const { title, avatar } = Astro.props;
+const { title } = Astro.props;
 ---
 
-<html lang='en'>
+<html lang='en' class=''>
   <head>
     <meta charset='utf-8' />
     <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
     <meta name='viewport' content='width=device-width' />
     <meta name='generator' content={Astro.generator} />
     <title>{title}</title>
+    <script is:inline>
+      (() => {
+        try {
+          const saved = localStorage.getItem('theme');
+          const prefersDark = matchMedia(
+            '(prefers-color-scheme: dark)'
+          ).matches;
+          const html = document.documentElement;
+          if (saved === 'dark' || (!saved && prefersDark)) {
+            html.classList.add('dark');
+          } else {
+            html.classList.remove('dark');
+          }
+        } catch {}
+      })();
+    </script>
   </head>
-  <body id='page-top' data-bs-theme='dark'>
-    <Navbar avatarUrl={avatar.link} avatarAlt={avatar.alt} />
-    <div class='container-fluid p-0' class='bg-primary'>
-      <slot />
-    </div>
+  <body class="bg-white dark:bg-black text-black dark:text-white">
+     <main
+      class='min-h-screen bg-white dark:bg-gray-900 py-16 px-4 sm:px-6 lg:px-8'
+    >
+      <div class='max-w-2xl mx-auto'>
+        <slot />
+      </div>
+    </main>
   </body>
 </html>

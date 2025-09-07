@@ -1,0 +1,109 @@
+---
+import { getLangFromUrl, useTranslations } from '@/i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<form
+  id='contact-form'
+  class='space-y-4'
+  data-sending=''
+  data-message-sent=''
+  data-message-sent-description=''
+>
+  <div class='grid grid-cols-1 sm:grid-cols-2 gap-4'>
+    <div>
+      <label
+        for='name'
+        class='block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2'
+        >{t('contact.form.name.label')}</label
+      >
+      <input
+        id='name'
+        name='name'
+        type='text'
+        required
+        placeholder={t('contact.form.name.placeholder')}
+        class='flex h-10 w-full rounded-md border bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 border-gray-200 dark:border-gray-700'
+      />
+    </div>
+    <div>
+      <label
+        for='email'
+        class='block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2'
+        >{t('contact.form.email.label')}</label
+      >
+      <input
+        id='email'
+        name='email'
+        type='email'
+        required
+        placeholder={t('contact.form.email.placeholder')}
+        class='flex h-10 w-full rounded-md border bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 border-gray-200 dark:border-gray-700'
+      />
+    </div>
+  </div>
+
+  <div>
+    <label
+      for='message'
+      class='block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2'
+      >{t('contact.form.message.label')}</label
+    >
+    <textarea
+      id='message'
+      name='message'
+      required
+      placeholder={t('contact.form.message.placeholder')}
+      rows='4'
+      class='flex min-h-[80px] w-full rounded-md border bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 border-gray-200 dark:border-gray-700'
+    ></textarea>
+  </div>
+
+  <button
+    type='submit'
+    class='inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:h-4 [&_svg]:w-4 [&_svg]:shrink-0 bg-black text-white hover:bg-black/90 dark:bg-white dark:text-black dark:hover:bg-white/90 h-10 px-4 py-2 w-full sm:w-auto'
+  >
+    <span class='label-default'>{t('contact.form.send')}</span>
+  </button>
+</form>
+
+<script type='module'>
+  // Client-side handler: select form by id and read translations from data-attributes.
+  const form = document.getElementById('contact-form');
+  if (!form) throw new Error('Contact form not found');
+
+  function showToast(title, description) {
+    const toast = document.createElement('div');
+    toast.className =
+      'fixed bottom-6 right-6 bg-white dark:bg-gray-800 border rounded-md p-4 shadow-lg z-50';
+    toast.innerHTML = `<strong class="block">${title}</strong><div class="mt-1 text-sm">${description}</div>`;
+    document.body.appendChild(toast);
+    setTimeout(() => toast.remove(), 3500);
+  }
+
+  async function onSubmit(e) {
+    e.preventDefault();
+    const submitButton = form.querySelector('button[type="submit"]');
+    if (!submitButton) return;
+    submitButton.disabled = true;
+    const originalText = submitButton.textContent;
+    const sendingText = form.dataset.sending || 'Sending...';
+    submitButton.textContent = sendingText;
+
+    // Simulate async submission
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+
+    const title = form.dataset.messageSent || 'Message sent';
+    const desc =
+      form.dataset.messageSentDescription || 'Thanks for reaching out!';
+    showToast(title, desc);
+
+    form.reset();
+    submitButton.disabled = false;
+    submitButton.textContent = originalText;
+  }
+
+  form.addEventListener('submit', onSubmit);
+</script>
