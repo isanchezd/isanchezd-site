@@ -1,0 +1,57 @@
+---
+import { Moon, Sun } from '@lucide/astro';
+import Button from '@/components/ui/button.astro';
+---
+
+<Button
+  variant='ghost'
+  size='sm'
+  aria-label='Toggle theme'
+  className='text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
+>
+  <Sun
+    class='h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0'
+  />
+  <Moon
+    class='absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100'
+  />
+</Button>
+
+<script type='module'>
+  const button = document.querySelector('button[aria-label="Toggle theme"]');
+  if (!button) throw new Error('Theme toggle button not found');
+
+  function setTheme(theme) {
+    if (theme === 'dark') {
+      document.documentElement.classList.remove('light');
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      document.documentElement.classList.add('light');
+      localStorage.setItem('theme', 'light');
+    }
+  }
+
+  function toggleTheme() {
+    const currentTheme =
+      localStorage.getItem('theme') ||
+      (window.matchMedia('(prefers-color-scheme: dark)').matches
+        ? 'dark'
+        : 'light');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    setTheme(newTheme);
+  }
+
+  // Initialize theme on page load
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+    setTheme(savedTheme);
+  } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    setTheme('dark');
+  } else {
+    setTheme('light');
+  }
+
+  button.addEventListener('click', toggleTheme);
+</script>

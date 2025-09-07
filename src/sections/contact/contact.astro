@@ -1,0 +1,17 @@
+---
+import Card from '@/components/ui/card/card.astro';
+import ContactForm from '@/components/contact-form.astro';
+
+const { title } = Astro.props;
+---
+
+<section>
+  <h2 class='text-lg font-medium text-gray-900 dark:text-white mb-6'>
+    {title}
+  </h2>
+  <Card class='border-gray-200 dark:border-gray-700'>
+    <div class='p-6'>
+      <ContactForm />
+    </div>
+  </Card>
+</section>

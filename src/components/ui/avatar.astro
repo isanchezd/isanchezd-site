@@ -1,0 +1,26 @@
+---
+const {
+  src,
+  alt = '',
+  fallback = '',
+  class: className = '',
+  ...props
+} = Astro.props;
+
+const rootClasses = `relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full ${className}`;
+const imageClasses = 'aspect-square h-full w-full';
+const fallbackClasses =
+  'flex h-full w-full items-center justify-center rounded-full bg-muted';
+---
+
+<div class={rootClasses}>
+  {
+    src ? (
+      <img src={src} alt={alt} class={imageClasses} {...props} />
+    ) : (
+      <span class={fallbackClasses}>
+        {fallback}
+      </span>
+    )
+  }
+</div>

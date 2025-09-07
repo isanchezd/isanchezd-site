@@ -8,7 +8,7 @@
       "name": "Iván",
       "surnames": "Sánchez Díaz",
       "title": "Software Web Developer",
-      "description": "Trabajando en desarrollo web durante los últimos 10 años como desarrollador full-stack con JavaScript, he aplicado pragmáticamente principios de desarrollo de software como SOLID, YAGNI, KISS, DRY en equipos liderados por metodologías ágiles (Scrum, Kanban) y metodologías híbridas (Agile-waterfall Hybrid) en sectores como educación, editorial y finanzas. Esto me ha proporcionado una comprensión integral del análisis, diseño, desarrollo e implementación de aplicaciones web en estos sectores.\n\nAdemás, disfruto del mentorazgo porque cuando comencé en el campo, hubiera apreciado tener a alguien a mi lado para guiarme sobre cómo hacer las cosas correctamente. Desde entonces, he adoptado el lema 'Sé el mentor que desearías haber tenido'.\n\nAdemás de mi experiencia profesional, también disfruto el cacharreo con otras herramientas fuera de mi trabajo diario para experimentar y aprender cómo se hacen las cosas con diferentes herramientas y tecnologías.\n\n\n",
+      "description": "Desarrollador full-stack con 10 años de experiencia en sectores como educación, editorial, finanzas y textil. Me motiva hacer las cosas bien, con un enfoque de mejora continua, y disfruto ayudando a otros a crecer con el lema “Sé el mentor que desearías haber tenido”. Siempre estoy explorando nuevas herramientas y tecnologías para seguir aprendiendo en mi día a día.",
       "avatar": {
         "link": "https://media-asgard.s3.eu-west-1.amazonaws.com/24/02/17/90b5074d-b817-4ce3-ac3e-197b27128e0e_profile.png",
         "alt": "profile.png"
@@ -32,6 +32,10 @@
       {
         "type": "twitter",
         "URL": "https://twitter.com/isanchezd88"
+      },
+      {
+        "type": "email",
+        "URL": "sanchez.diaz.ivan@gmail.com"
       }
     ]
   },
@@ -50,6 +54,7 @@
           {
             "name": "Senior Frontend Developer",
             "startDate": "2024-06-01",
+            "finishDate": "Now",
             "challenges": [
               {
                 "description": ""

@@ -1,0 +1,12 @@
+---
+import SkillBadge from '@/sections/skills/components/skill-badge.astro';
+
+const { title, skills } = Astro.props;
+---
+
+<section class='mb-16'>
+  <h2 class='text-lg font-medium text-gray-900 dark:text-white mb-6'>{title}</h2>
+  <div class='flex flex-wrap gap-2'>
+    {skills.map((skill) => <SkillBadge name={skill.skill.name} />)}
+  </div>
+</section>

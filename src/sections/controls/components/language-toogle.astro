@@ -1,0 +1,17 @@
+---
+import Button from '@/components/ui/button.astro';
+
+const { lang } = Astro.props;
+const target = lang === 'es' ? '/en' : '/es';
+const label = lang === 'es' ? 'EN' : 'ES';
+---
+
+<a href={target}>
+  <Button
+    variant='ghost'
+    size='sm'
+    className='text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
+  >
+    {label}
+  </Button>
+</a>

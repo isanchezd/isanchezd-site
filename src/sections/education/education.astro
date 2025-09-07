@@ -1,10 +1,87 @@
 ---
-import SectionContent from '../../layouts/section-content.astro';
-import Study from './study/study.astro';
+import { GraduationCap, Award } from '@lucide/astro';
+import StudyTypes from '@/enums/study-types.js';
 
-const { studies, title, id } = Astro.props;
+const { title, oficialTitle, complementaryTitle, studies } = Astro.props;
+
+const officialDegrees = studies.filter(
+  (study) => study.studyType === StudyTypes.degree
+);
+const complementaryDegrees = studies.filter(
+  (study) => study.studyType === StudyTypes.certification
+);
 ---
 
-<SectionContent id={id} title={title}>
-  {studies.map((study) => <Study study={study} />)}
-</SectionContent>
+<section class='mb-16'>
+  <h2 class='text-lg font-medium text-gray-900 dark:text-white mb-8'>
+    {title}
+  </h2>
+
+  <div class='space-y-12'>
+    <div class='flex flex-col gap-8'>
+      <div class='flex items-center gap-2 mb-6'>
+        <GraduationCap class='h-4 w-4 text-gray-600 dark:text-gray-400' />
+        <h3 class='text-base font-medium text-gray-900 dark:text-white'>
+          {oficialTitle}
+        </h3>
+      </div>
+      {
+        officialDegrees.map((degree) => {
+          const { name, startDate, finishDate, institution } = degree;
+          const { name: institutionName, description } = institution;
+          return (
+            <div class='flex gap-8 ml-6'>
+              <div class='text-sm text-gray-500 dark:text-gray-400 w-24 shrink-0 pt-1'>
+                {startDate} - {finishDate}
+              </div>
+              <div class='flex-1'>
+                <h4 class='font-medium text-gray-900 dark:text-white mb-1'>
+                  {name}
+                </h4>
+                <p class='text-sm text-gray-500 dark:text-gray-400 mb-3'>
+                  {institutionName}
+                </p>
+                <p class='text-gray-600 dark:text-gray-300 text-sm leading-relaxed'>
+                  {description}
+                </p>
+              </div>
+            </div>
+          );
+        })
+      }
+    </div>
+
+    <div>
+      <div class='flex items-center gap-2 mb-6'>
+        <Award class='h-4 w-4 text-gray-600 dark:text-gray-400' />
+        <h3 class='text-base font-medium text-gray-900 dark:text-white'>
+          {complementaryTitle}
+        </h3>
+      </div>
+
+      <div class='space-y-4 ml-6'>
+        {
+          complementaryDegrees.map((degree) => {
+            const { name, startDate, institution } = degree;
+            const { name: institutionName } = institution;
+            return (
+              <div class='flex gap-8'>
+                <div class='text-sm text-gray-500 dark:text-gray-400 w-24 shrink-0 pt-1'>
+                  {startDate}
+                </div>
+                <div class='flex-1'>
+                  <h4 class='font-medium text-gray-900 dark:text-white text-sm'>
+                    {name}
+                  </h4>
+                  <p class='text-xs text-gray-500 dark:text-gray-400'>
+                    {institutionName}
+                  </p>
+                </div>
+              </div>
+            );
+          })
+        }
+      </div>
+    </div>
+  </div>
+</section>

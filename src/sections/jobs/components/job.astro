@@ -1,0 +1,82 @@
+---
+const { job } = Astro.props;
+
+const { organization, roles } = job;
+const { name: organizationName, location: organizationLocation } = organization;
+const firtRole = roles[0];
+const lastRole = roles[job.roles.length - 1];
+
+const completePeriod =
+  firtRole.startDate === lastRole.finishDate
+    ? firtRole.startDate
+    : `${firtRole.startDate} - ${lastRole.finishDate}`;
+---
+
+<div class='flex gap-8'>
+  <div class='text-sm text-gray-500 dark:text-gray-400 w-24 shrink-0 pt-1'>
+    {completePeriod}
+  </div>
+  <div class='flex-1'>
+    <h3 class='font-medium text-gray-900 dark:text-white mb-1'>
+      {organizationName}
+    </h3>
+    <p class='text-sm text-gray-500 dark:text-gray-400 mb-4'>
+      {organizationLocation}
+    </p>
+
+    {/* Project Images */}
+    { /*
+      (
+        <div class='flex gap-3 mb-4'>
+          <div class='w-24 h-16 bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden'>
+            <img
+              src='/web-dashboard-interface.png'
+              alt='Dashboard Project'
+              class='w-full h-full object-cover'
+            />
+          </div>
+          <div class='w-24 h-16 bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden'>
+            <img
+              src='/mobile-app-interface.png'
+              alt='Mobile App Project'
+              class='w-full h-full object-cover'
+            />
+          </div>
+          <div class='w-24 h-16 bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden'>
+            <img
+              src='/modern-ecommerce-website.png'
+              alt='E-commerce Project'
+              class='w-full h-full object-cover'
+            />
+          </div>
+        </div>
+      ) */
+    }
+
+    <div class='space-y-6'>
+      {
+        roles.map((rol) => {
+          const { name, startDate, finishDate, challenges } = rol;
+          const description = challenges
+            .map((challenge) => challenge.description)
+            .join(' ');
+          return (
+            <div class='border-l-2 border-gray-200 dark:border-gray-700 pl-4'>
+              <div class='flex items-start justify-between mb-2'>
+                <h4 class='font-medium text-gray-900 dark:text-white'>
+                  {name}
+                </h4>
+                <span class='text-xs text-gray-500 dark:text-gray-400 ml-4 flex-shrink-0'>
+                  {startDate} - {finishDate}
+                </span>
+              </div>
+              <p class='text-gray-600 dark:text-gray-300 text-sm leading-relaxed'>
+                {description}
+              </p>
+            </div>
+          );
+        })
+      }
+    </div>
+  </div>
+</div>

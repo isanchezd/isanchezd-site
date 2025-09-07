@@ -1,0 +1,59 @@
+---
+import MainLayout from '@/layouts/main.astro';
+
+import Controls from '@/sections/controls/controls.astro';
+import PersonalInfo from '@/sections/personal-info/personal-info.astro';
+import About from '@/sections/about/about.astro';
+import Jobs from '@/sections/jobs/jobs.astro';
+import Education from '@/sections/education/education.astro';
+import Skills from '@/sections/skills/skills.astro';
+import Contact from '@/sections/contact/contact.astro';
+import { getLangFromUrl, useTranslations } from '@/i18n/utils';
+import { getPageData } from '@/lib/page';
+
+export function getStaticPaths() {
+  return [{ params: { lang: 'es' } }, { params: { lang: 'en' } }];
+}
+
+const lang = getLangFromUrl(Astro.url);
+const data = getPageData('es');
+const {
+  fullname,
+  title,
+  description,
+  municipality,
+  country,
+  relevantLinks,
+  emailUrl,
+  jobs,
+  studies,
+  hardSkills,
+} = data;
+
+const t = useTranslations(lang);
+---
+
+<MainLayout title={fullname}>
+  <Controls links={relevantLinks} lang={lang} />
+  <PersonalInfo
+    fullname={fullname}
+    title={title}
+    municipality={municipality}
+    country={country}
+    emailUrl={emailUrl}
+  />
+  <About title={t('about')} description={description} />
+  <Jobs title={t('experience')} jobs={jobs} />
+  <Education
+    title={t('education')}
+    oficialTitle={t('education.official')}
+    complementaryTitle={t('education.complementary')}
+    studies={studies}
+  />
+  <Skills title={t('technologies')} skills={hardSkills} />
+
+  {/* Posts section */}
+
+  {/* Contact Section */}
+  <Contact title={t('contact')} />
+</MainLayout>

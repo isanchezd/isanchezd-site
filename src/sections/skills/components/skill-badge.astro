@@ -1,0 +1,12 @@
+---
+import Badge from '@/components/ui/badge.astro';
+
+const { name } = Astro.props;
+---
+
+<Badge
+  variant='outline'
+  class='flex items-center gap-1.5 px-3 py-1 text-sm border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'
+>
+  <span>{name}</span>
+</Badge>
