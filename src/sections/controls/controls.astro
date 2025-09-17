@@ -1,7 +1,7 @@
 ---
 import SocialLinks from '@/sections/controls/components/social-links.astro';
 import LanguageToggle from '@/sections/controls/components/language-toogle.astro';
-import ThemeToggle from '@/sections/controls/components/theme-toogle.astro';
+import ThemeToggle from '@/sections/controls/components/theme-toogle.jsx';
 
 const { links } = Astro.props;
 const { lang } = Astro.props;
@@ -12,6 +12,6 @@ const { lang } = Astro.props;
   <div class='flex items-center gap-2'>
     <LanguageToggle lang={lang}/>
     <div class='w-px h-4 bg-gray-300 dark:bg-gray-600'></div>
-    <ThemeToggle />
+    <ThemeToggle client:idle />
   </div>
 </div>
