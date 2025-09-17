@@ -1,0 +1,16 @@
+---
+---
+<script is:inline>
+  (() => {
+    try {
+      const saved = localStorage.getItem('theme');
+      const prefersDark = matchMedia('(prefers-color-scheme: dark)').matches;
+      const html = document.documentElement;
+      if (saved === 'dark' || (!saved && prefersDark)) {
+        html.classList.add('dark');
+      } else {
+        html.classList.remove('dark');
+      }
+    } catch {}
+  })();
+</script>
