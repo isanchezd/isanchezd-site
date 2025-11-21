@@ -69,40 +69,65 @@ const t = useTranslations(lang);
   </button>
 </form>
 
-<script type='module'>
+<script type="module">
+  import { createToast } from '/js/toast.js';
+
   // Client-side handler: select form by id and read translations from data-attributes.
   const form = document.getElementById('contact-form');
-  if (!form) throw new Error('Contact form not found');
-
-  function showToast(title, description) {
-    const toast = document.createElement('div');
-    toast.className =
-      'fixed bottom-6 right-6 bg-white dark:bg-gray-800 border rounded-md p-4 shadow-lg z-50';
-    toast.innerHTML = `<strong class="block">${title}</strong><div class="mt-1 text-sm">${description}</div>`;
-    document.body.appendChild(toast);
-    setTimeout(() => toast.remove(), 3500);
-  }
+  if (!form) throw new Error('Contact form not found')
 
   async function onSubmit(e) {
     e.preventDefault();
     const submitButton = form.querySelector('button[type="submit"]');
-    if (!submitButton) return;
+    if (!submitButton || !(submitButton instanceof HTMLButtonElement)) return;
+
     submitButton.disabled = true;
     const originalText = submitButton.textContent;
     const sendingText = form.dataset.sending || 'Sending...';
     submitButton.textContent = sendingText;
 
-    // Simulate async submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      const formData = new FormData(form);
+      const data = {
+        name: formData.get('name'),
+        email: formData.get('email'),
+        message: formData.get('message'),
+      };
 
-    const title = form.dataset.messageSent || 'Message sent';
-    const desc =
-      form.dataset.messageSentDescription || 'Thanks for reaching out!';
-    showToast(title, desc);
+      // Enviar al API endpoint
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
 
-    form.reset();
-    submitButton.disabled = false;
-    submitButton.textContent = originalText;
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || 'Failed to send message');
+      }
+
+      // Mostrar mensaje de éxito
+      const title = form.dataset.messageSent || 'Message sent';
+      const desc =
+        form.dataset.messageSentDescription || 'Thanks for reaching out!';
+      createToast(title, desc, false);
+
+      // Resetear el formulario
+      form.reset();
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      createToast(
+        'Error',
+        error.message || 'Failed to send message. Please try again.',
+        true
+      );
+    } finally {
+      submitButton.disabled = false;
+      submitButton.textContent = originalText;
+    }
   }
 
   form.addEventListener('submit', onSubmit);
