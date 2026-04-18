@@ -1,10 +1,10 @@
 ---
 import { Github, Linkedin, Download } from '@lucide/astro';
-import Button from '@/components/ui/button.astro';
 
-const { links } = Astro.props;
+const { links, lang } = Astro.props;
 const linkedinUrl = links.find((link) => link.type === 'linkedin')?.URL || '#';
 const githubUrl = links.find((link) => link.type === 'github')?.URL || '#';
+const cvUrl = `/pdfs/cv-${lang}.pdf`;
 ---
 
 <div class='flex items-center gap-3'>
@@ -26,12 +26,12 @@ const githubUrl = links.find((link) => link.type === 'github')?.URL || '#';
   >
     <Linkedin class='h-5 w-5' />
   </a>
-  <Button
-    variant='ghost'
-    size='sm'
-    class='text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white p-1'
+  <a
+    href={cvUrl}
+    download
+    class='text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors p-1'
     aria-label='Descargar CV en PDF'
   >
     <Download class='h-5 w-5' />
-  </Button>
+  </a>
 </div>
