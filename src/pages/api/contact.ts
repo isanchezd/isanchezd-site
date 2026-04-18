@@ -4,8 +4,6 @@ import { escapeHtml } from '@/utils/sanitize';
 import type { APIRoute } from 'astro';
 import { Resend } from 'resend';
 
-const resend = new Resend(import.meta.env.RESEND_API_KEY);
-
 export const POST: APIRoute = async ({ request }) => {
   try {
     // Parsear el body
@@ -45,6 +43,9 @@ export const POST: APIRoute = async ({ request }) => {
         { status: 500, headers: { 'Content-Type': 'application/json' } }
       );
     }
+
+    // Instantiate Resend after env var validation
+    const resend = new Resend(import.meta.env.RESEND_API_KEY);
 
     // Escape user inputs to prevent HTML injection
     const escapedName = escapeHtml(name);
