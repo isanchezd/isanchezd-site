@@ -8,11 +8,27 @@ import { Resend } from 'resend';
 export const POST: APIRoute = async ({ request }) => {
   try {
     // Parsear el body
-    const body = await request.json();
-    const { name, email, message } = body;
+    let body: unknown;
+    try {
+      body = await request.json();
+    } catch {
+      return new Response(
+        JSON.stringify({ error: 'Invalid JSON body' }),
+        { status: 400, headers: { 'Content-Type': 'application/json' } }
+      );
+    }
+
+    if (typeof body !== 'object' || body === null || Array.isArray(body)) {
+      return new Response(
+        JSON.stringify({ error: 'Request body must be a JSON object' }),
+        { status: 400, headers: { 'Content-Type': 'application/json' } }
+      );
+    }
+
+    const { name, email, message } = body as Record<string, unknown>;
 
     // Validar los campos requeridos
-    if (!name || !email || !message) {
+    if (typeof name !== 'string' || typeof email !== 'string' || typeof message !== 'string' || !name || !email || !message) {
       return new Response(
         JSON.stringify({ error: 'Missing required fields: name, email, message' }),
         { status: 400, headers: { 'Content-Type': 'application/json' } }
