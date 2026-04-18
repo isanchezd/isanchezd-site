@@ -1,10 +1,12 @@
 export const prerender = false; // Este endpoint NO se prerenderiza (serverless)
 
+import { escapeHtml } from '@/utils/sanitize';
+import type { APIRoute } from 'astro';
 import { Resend } from 'resend';
 
 const resend = new Resend(import.meta.env.RESEND_API_KEY);
 
-export const POST = async ({ request }) => {
+export const POST: APIRoute = async ({ request }) => {
   try {
     // Parsear el body
     const body = await request.json();
@@ -44,23 +46,28 @@ export const POST = async ({ request }) => {
       );
     }
 
+    // Escape user inputs to prevent HTML injection
+    const escapedName = escapeHtml(name);
+    const escapedEmail = escapeHtml(email);
+    const escapedMessage = escapeHtml(message).replace(/\n/g, '<br>');
+
     // Enviar el email usando Resend
     const { data, error } = await resend.emails.send({
       from: import.meta.env.RESEND_EMAIL_FROM || 'onboarding@resend.dev',
       to: import.meta.env.CONTACT_EMAIL_TO,
       replyTo: email,
-      subject: `Nuevo mensaje de contacto de ${name}`,
+      subject: `Nuevo mensaje de contacto de ${escapedName}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
           <h2 style="color: #333;">Nuevo mensaje de contacto</h2>
           <div style="background-color: #f5f5f5; padding: 20px; border-radius: 5px; margin: 20px 0;">
-            <p style="margin: 10px 0;"><strong>Nombre:</strong> ${name}</p>
-            <p style="margin: 10px 0;"><strong>Email:</strong> ${email}</p>
+            <p style="margin: 10px 0;"><strong>Nombre:</strong> ${escapedName}</p>
+            <p style="margin: 10px 0;"><strong>Email:</strong> ${escapedEmail}</p>
           </div>
           <div style="margin: 20px 0;">
             <p style="margin: 10px 0;"><strong>Mensaje:</strong></p>
             <p style="background-color: #f5f5f5; padding: 15px; border-radius: 5px; line-height: 1.6;">
-              ${message.replace(/\n/g, '<br>')}
+              ${escapedMessage}
             </p>
           </div>
           <hr style="border: none; border-top: 1px solid #ddd; margin: 20px 0;">
