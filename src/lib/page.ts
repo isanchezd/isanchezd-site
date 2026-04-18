@@ -1,7 +1,7 @@
 import resumeEs from '@/data/resume-es.json';
 import resumeEn from '@/data/resume-en.json';
 
-export function getPageData(langParam) {
+export function getPageData(langParam: string) {
   const lang = langParam === 'en' ? 'en' : 'es';
   const resume = lang === 'en' ? resumeEn : resumeEs;
 
