@@ -1,5 +1,6 @@
 ---
 import { getLangFromUrl, useTranslations } from '@/i18n/utils';
+import { CONTACT_LIMITS } from '@/lib/contact';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -8,7 +9,6 @@ const t = useTranslations(lang);
 <form
   id='contact-form'
   class='space-y-4'
-+
 >
   <div class='grid grid-cols-1 sm:grid-cols-2 gap-4'>
     <div>
@@ -22,6 +22,7 @@ const t = useTranslations(lang);
         name='name'
         type='text'
         required
+        maxlength={CONTACT_LIMITS.name}
         placeholder={t('contact.form.name.placeholder')}
         class='flex h-10 w-full rounded-md border bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 border-gray-200 dark:border-gray-700'
       />
@@ -37,6 +38,7 @@ const t = useTranslations(lang);
         name='email'
         type='email'
         required
+        maxlength={CONTACT_LIMITS.email}
         placeholder={t('contact.form.email.placeholder')}
         class='flex h-10 w-full rounded-md border bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 border-gray-200 dark:border-gray-700'
       />
@@ -53,6 +55,7 @@ const t = useTranslations(lang);
       id='message'
       name='message'
       required
+      maxlength={CONTACT_LIMITS.message}
       placeholder={t('contact.form.message.placeholder')}
       rows='4'
       class='flex min-h-[80px] w-full rounded-md border bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 border-gray-200 dark:border-gray-700'
@@ -87,9 +90,9 @@ const t = useTranslations(lang);
     try {
       const formData = new FormData(form);
       const data = {
-        name: formData.get('name'),
-        email: formData.get('email'),
-        message: formData.get('message'),
+        name: String(formData.get('name') ?? ''),
+        email: String(formData.get('email') ?? ''),
+        message: String(formData.get('message') ?? ''),
       };
 
       // Enviar al API endpoint

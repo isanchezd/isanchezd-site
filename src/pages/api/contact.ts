@@ -1,5 +1,6 @@
 export const prerender = false; // Este endpoint NO se prerenderiza (serverless)
 
+import { CONTACT_LIMITS } from '@/lib/contact';
 import { escapeHtml } from '@/utils/sanitize';
 import type { APIRoute } from 'astro';
 import { Resend } from 'resend';
@@ -14,6 +15,14 @@ export const POST: APIRoute = async ({ request }) => {
     if (!name || !email || !message) {
       return new Response(
         JSON.stringify({ error: 'Missing required fields: name, email, message' }),
+        { status: 400, headers: { 'Content-Type': 'application/json' } }
+      );
+    }
+
+    // Validar longitud máxima de los campos
+    if (name.length > CONTACT_LIMITS.name || email.length > CONTACT_LIMITS.email || message.length > CONTACT_LIMITS.message) {
+      return new Response(
+        JSON.stringify({ error: 'One or more fields exceed the maximum allowed length' }),
         { status: 400, headers: { 'Content-Type': 'application/json' } }
       );
     }
