@@ -6,7 +6,7 @@ This project contains the source code of the my personal CV website
 
 ## Stack
 
-- [Astro](https://astro.build/) 5.x - Static site generator with component support
+- [Astro](https://astro.build/) 6.x - Static site generator with component support
 - [React](https://react.dev/) 19 - Interactive components
 - [Tailwind CSS](https://tailwindcss.com/) 4.1 - Utility-first CSS framework
 - [Lucide React](https://lucide.dev/) - Icon library
@@ -53,6 +53,7 @@ All commands are run from the root of the project, from a terminal:
 | `npm run preview`         | Preview your build locally, before deploying     |
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
+| `npm run generate:pdfs`   | Generate PDF versions of the CV                  |
 
 ## Contact Form Setup
 
