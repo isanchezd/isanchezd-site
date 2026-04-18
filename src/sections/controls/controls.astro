@@ -7,8 +7,8 @@ const { links } = Astro.props;
 const { lang } = Astro.props;
 ---
 
-<div class='flex justify-between items-center mb-8'>
-  <SocialLinks links={links} />
+<div class='flex justify-between items-center mb-8 print:hidden'>
+  <SocialLinks links={links} lang={lang} />
   <div class='flex items-center gap-2'>
     <LanguageToggle lang={lang}/>
     <div class='w-px h-4 bg-gray-300 dark:bg-gray-600'></div>

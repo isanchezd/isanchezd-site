@@ -7,7 +7,8 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "generate:pdfs": "node scripts/generate-pdfs.js"
   },
   "dependencies": {
     "@astrojs/react": "~4.3.1",
@@ -22,5 +23,8 @@
     "resend": "^6.5.2",
     "tailwindcss": "~4.1.13",
     "tailwindcss-animate": "~1.0.7"
+  },
+  "devDependencies": {
+    "playwright": "^1.59.1"
   }
 }
