@@ -21,6 +21,9 @@ export const ui = {
     'contact.form.message.label': 'Mensaje',
     'contact.form.message.placeholder': 'Tu mensaje aquí...',
     'contact.form.send': 'Enviar',
+    'contact.form.sending': 'Enviando...',
+    'contact.form.messageSent': '¡Mensaje enviado!',
+    'contact.form.messageSentDescription': 'Tu mensaje ha sido enviado correctamente. Me pondré en contacto contigo lo antes posible.',
   },
   en: {
     about: 'About',
@@ -36,6 +39,9 @@ export const ui = {
     'contact.form.email.placeholder': 'name@email.com',
     'contact.form.message.label': 'Message',
     'contact.form.message.placeholder': 'Your message here...',
-    'contact.form.send': 'Enviar',
+    'contact.form.send': 'Send',
+    'contact.form.sending': 'Sending...',
+    'contact.form.messageSent': 'Message sent!',
+    'contact.form.messageSentDescription': 'Your message has been sent successfully. I will get back to you as soon as possible.',
   },
 };
