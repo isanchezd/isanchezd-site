@@ -7,7 +7,16 @@ export function createToast(title, description, isError = false) {
   const descClass = isError ? 'text-red-700 dark:text-red-300' : '';
 
   toast.className = `fixed bottom-6 right-6 ${bgClass} border rounded-md p-4 shadow-lg z-50 max-w-md`;
-  toast.innerHTML = `<strong class="block ${titleClass}">${title}</strong><div class="mt-1 text-sm ${descClass}">${description}</div>`;
+  
+  const titleEl = document.createElement('strong');
+  titleEl.className = `block ${titleClass}`;
+  titleEl.textContent = title;
+  
+  const descEl = document.createElement('div');
+  descEl.className = `mt-1 text-sm ${descClass}`;
+  descEl.textContent = description;
+  toast.appendChild(titleEl);
+  toast.appendChild(descEl);
   document.body.appendChild(toast);
   setTimeout(() => toast.remove(), 5000);
 }
