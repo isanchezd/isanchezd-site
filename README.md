@@ -2,12 +2,16 @@
 
 ## Description
 
-This project contains the source code of the my personal website
+This project contains the source code of the my personal CV website
 
 ## Stack
 
-- [Astro](https://astro.build/)
-- [Bootstrap](https://getbootstrap.com/)
+- [Astro](https://astro.build/) 5.x - Static site generator with component support
+- [React](https://react.dev/) 19 - Interactive components
+- [Tailwind CSS](https://tailwindcss.com/) 4.1 - Utility-first CSS framework
+- [Lucide React](https://lucide.dev/) - Icon library
+- [Resend](https://resend.com/) - Email delivery service for contact form
+- [Vercel](https://vercel.com/) - Hosting with serverless function adapter
 
 
 ## Project Structure
@@ -27,11 +31,11 @@ Inside of your Astro project, you'll see the following folders and files:
 |   └── i18n/
 |       └── i18n implementation
 │   └── pages/
-│       └── pages section
+│       └── page routes and API endpoints
 |   └── sections/
-|       └── layouts used by pages & components
+|       └── major page sections (about, experience, education, skills, contact, etc.)
 |    └── styles/
-|       └── styles files
+|       └── global styles and CSS
 └── package.json
 ```
 
@@ -82,10 +86,6 @@ The contact form uses [Resend](https://resend.com/) for email delivery. To confi
    - In Resend, verify your domain
    - Update `RESEND_EMAIL_FROM` to use your domain (e.g., `contact@yourdomain.com`)
 
-## Ackwnoledgment
-
-This site is based on [Bootstrap Resume](https://startbootstrap.com/theme/resume) so my personal gratitud for the developer of the site
-
 ## Authors
 
-- Ivan Sánchez Díaz
+- [Ivan Sánchez Díaz](mailto:sanchez.diaz.ivan@gmail.com)
