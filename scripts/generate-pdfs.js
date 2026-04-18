@@ -1,34 +1,55 @@
 import { chromium } from 'playwright';
-import { spawn } from 'child_process';
-import { mkdirSync, rmSync } from 'fs';
+import { execSync } from 'child_process';
+import { mkdirSync, rmSync, readFileSync, existsSync, statSync } from 'fs';
+import { createServer } from 'http';
+import { join, extname } from 'path';
 
 const PORT = 4322;
 const BASE_URL = `http://localhost:${PORT}`;
 const LANGS = ['es', 'en'];
+const DIST = 'dist/client';
 
-function startPreviewServer() {
-  const server = spawn('npx', ['astro', 'preview', '--port', String(PORT)], {
-    stdio: 'pipe',
-    shell: true,
+const MIME = {
+  '.html': 'text/html',
+  '.css': 'text/css',
+  '.js': 'application/javascript',
+  '.json': 'application/json',
+  '.png': 'image/png',
+  '.jpg': 'image/jpeg',
+  '.svg': 'image/svg+xml',
+  '.woff2': 'font/woff2',
+};
+
+function startServer() {
+  const server = createServer((req, res) => {
+    let urlPath = req.url.split('?')[0];
+    if (urlPath.endsWith('/')) urlPath += 'index.html';
+
+    let filePath = join(DIST, urlPath);
+    if (!existsSync(filePath)) filePath = join(DIST, urlPath + '.html');
+    if (!existsSync(filePath)) filePath = join(DIST, urlPath, 'index.html');
+    if (existsSync(filePath) && statSync(filePath).isDirectory()) filePath = join(filePath, 'index.html');
+
+    if (!existsSync(filePath)) {
+      res.writeHead(404);
+      res.end('Not found');
+      return;
+    }
+
+    const ext = extname(filePath);
+    res.writeHead(200, { 'Content-Type': MIME[ext] || 'application/octet-stream' });
+    res.end(readFileSync(filePath));
   });
 
-  return new Promise((resolve, reject) => {
-    server.stdout.on('data', (data) => {
-      if (data.toString().includes(String(PORT))) {
-        resolve(server);
-      }
-    });
-    server.stderr.on('data', (data) => {
-      if (data.toString().includes(String(PORT))) {
-        resolve(server);
-      }
-    });
-    setTimeout(() => reject(new Error('Preview server timeout')), 15000);
-  });
+  return new Promise((resolve) => server.listen(PORT, () => resolve(server)));
 }
 
-const server = await startPreviewServer();
-console.log('Preview server ready');
+console.log('Building...');
+execSync('npx astro build', { stdio: 'inherit' });
+
+console.log('Starting static server...');
+const server = await startServer();
+console.log(`Server ready at ${BASE_URL}`);
 
 mkdirSync('public/pdfs', { recursive: true });
 
@@ -48,9 +69,9 @@ for (const lang of LANGS) {
 }
 
 await browser.close();
-server.kill();
+server.close();
 
-for (const dir of ['dist', '.vercel']) {
+for (const dir of [DIST, '.vercel']) {
   rmSync(dir, { recursive: true, force: true });
 }
 console.log('Done.');

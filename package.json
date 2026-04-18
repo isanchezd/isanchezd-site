@@ -8,7 +8,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "generate:pdfs": "astro build && node scripts/generate-pdfs.js"
+    "generate:pdfs": "node scripts/generate-pdfs.js"
   },
   "dependencies": {
     "@astrojs/react": "~4.3.1",
